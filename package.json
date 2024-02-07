@@ -1,5 +1,6 @@
 {
   "name": "scholar",
+  "homepage": "https://serhatbek.github.io/scholar",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,6 +8,11 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "icon": "node src/tasks/iconFont.js",
+    "watch": "node src/tasks/watch.js",
+    "predeploy": "vite build",
+    "deploy": "gh-pages -d dist",
+    "clean": "rm -rf dist",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -22,6 +28,10 @@
     "eslint": "^8.55.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
+    "gh-pages": "^6.1.1",
+    "iconfont-maker": "^0.0.7",
+    "node-watch-changes": "^2.0.3",
+    "sass": "^1.70.0",
     "typescript": "^5.2.2",
     "vite": "^5.0.8"
   }
