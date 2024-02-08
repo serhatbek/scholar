@@ -36,44 +36,6 @@
   }
 }
 
-.testimonial-slider__pagination-div {
-  display: flex;
-  justify-content: center;
-  margin-top: 70px;
-
-  @include c.media(tablet) {
-    margin-top: 20px;
-  }
-
-  .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    background: c.$light-four !important;
-  }
-
-  .swiper-pagination-bullet-active {
-    background: c.$light-one !important;
-  }
-}
-
-.modal-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba($color: #000000, $alpha: 0.6);
-
-  .modal {
-    background-color: c.$light-one;
-    padding: 20px;
-    border-radius: 10px;
-  }
-}
-
 .position-fixed {
   position: fixed;
   top: 0;
