@@ -1,40 +1,40 @@
 @use '../common.scss' as c;
 
 .container {
-  max-width: 1220px;
+  max-width: 1320px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 12px;
 }
 
-.section {
-  &.section--bg {
-    @include c.imageCacheBust('/images/Home/home_pay_sectionbg2.png');
-    background-repeat: no-repeat;
-    background-position: center top;
-  }
+// .section {
+//   &.section--bg {
+//     @include c.imageCacheBust('/images/Home/home_pay_sectionbg2.png');
+//     background-repeat: no-repeat;
+//     background-position: center top;
+//   }
 
-  &__title {
-    color: c.$light-one;
-    // Viewport: 420 / 1220
-    font-size: clamp(32px, calc(2rem + ((1vw - 4.2px) * 2.5)), 52px);
-    line-height: clamp(37px, calc(2.3125rem + ((1vw - 4.2px) * 3.125)), 62px);
-    font-weight: 700;
-  }
+//   &__title {
+//     color: c.$light-one;
+//     // Viewport: 420 / 1220
+//     font-size: clamp(32px, calc(2rem + ((1vw - 4.2px) * 2.5)), 52px);
+//     line-height: clamp(37px, calc(2.3125rem + ((1vw - 4.2px) * 3.125)), 62px);
+//     font-weight: 700;
+//   }
 
-  &__desc {
-    color: c.$yellow-one;
-    font-size: clamp(13px, calc(0.8125rem + ((1vw - 4.2px) * 0.625)), 18px);
-    line-height: clamp(19px, calc(2.3125rem + ((1vw - 4.2px) * 3.125)), 28px);
-    font-weight: 700;
-  }
+//   &__desc {
+//     color: c.$yellow-one;
+//     font-size: clamp(13px, calc(0.8125rem + ((1vw - 4.2px) * 0.625)), 18px);
+//     line-height: clamp(19px, calc(2.3125rem + ((1vw - 4.2px) * 3.125)), 28px);
+//     font-weight: 700;
+//   }
 
-  &__subtitle {
-    color: c.$light-one;
-    font-size: clamp(18px, calc(1.125rem + ((1vw - 4.2px) * 1.5)), 30px);
-    font-weight: 500;
-  }
-}
+//   &__subtitle {
+//     color: c.$light-one;
+//     font-size: clamp(18px, calc(1.125rem + ((1vw - 4.2px) * 1.5)), 30px);
+//     font-weight: 500;
+//   }
+// }
 
 .position-fixed {
   position: fixed;

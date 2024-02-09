@@ -63,58 +63,74 @@
   content: "\f108";
   }
 
-  %icon-minus {
+  %icon-menu-close {
   content: "\f109";
+  }
+
+  .icon-menu-close:before {
+  content: "\f109";
+  }
+
+  %icon-menu-open {
+  content: "\f10a";
+  }
+
+  .icon-menu-open:before {
+  content: "\f10a";
+  }
+
+  %icon-minus {
+  content: "\f10b";
   }
 
   .icon-minus:before {
-  content: "\f109";
+  content: "\f10b";
   }
 
   %icon-play {
-  content: "\f10a";
+  content: "\f10c";
   }
 
   .icon-play:before {
-  content: "\f10a";
+  content: "\f10c";
   }
 
   %icon-plus-counter {
-  content: "\f10b";
+  content: "\f10d";
   }
 
   .icon-plus-counter:before {
-  content: "\f10b";
+  content: "\f10d";
   }
 
   %icon-plus {
-  content: "\f10c";
+  content: "\f10e";
   }
 
   .icon-plus:before {
-  content: "\f10c";
+  content: "\f10e";
   }
 
   %icon-right-arrow-circle {
-  content: "\f10d";
+  content: "\f10f";
   }
 
   .icon-right-arrow-circle:before {
-  content: "\f10d";
+  content: "\f10f";
   }
 
   %icon-search {
-  content: "\f10e";
+  content: "\f110";
   }
 
   .icon-search:before {
-  content: "\f10e";
+  content: "\f110";
   }
 
   %icon-twitter {
-  content: "\f10f";
+  content: "\f111";
   }
 
   .icon-twitter:before {
-  content: "\f10f";
+  content: "\f111";
   }

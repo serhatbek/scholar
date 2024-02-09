@@ -1,0 +1,61 @@
+@use '../../assets/css/common.scss' as c;
+
+.header {
+  background-color: c.$purple;
+  //   height: 80px;
+  $self: &;
+  display: flex;
+  align-items: center;
+  border-radius: 0px 0px 25px 25px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  position: absolute;
+  top: 40px;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    #{ $self }__logo a {
+      font-size: 36px;
+      font-weight: 500;
+      color: c.$white;
+      display: block;
+      position: relative;
+      padding-right: 20px;
+      margin-right: 20px;
+      text-transform: uppercase;
+
+      @include c.media(tablet) {
+        font-size: 34px;
+      }
+
+      &::after {
+        content: '';
+        height: 100%;
+        width: 1px;
+        display: block;
+        background-color: rgba($color: c.$white, $alpha: 0.5);
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+
+    #{ $self }__nav {
+      ul {
+        display: flex;
+
+        li {
+          a {
+            color: c.$white;
+            font-size: 14px;
+            padding: 20px;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}

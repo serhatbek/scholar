@@ -4,19 +4,78 @@
   box-sizing: border-box;
 }
 
+html,
 body,
+div,
+span,
+applet,
+object,
+iframe,
 h1,
 h2,
 h3,
 h4,
+h5,
+h6,
 p,
-figure,
 blockquote,
+div pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
 dl,
-ul,
+dt,
+dd,
 ol,
-dd {
+ul,
+li,
+figure,
+header,
+nav,
+section,
+article,
+aside,
+footer,
+figcaption {
   margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+header,
+nav,
+section,
+article,
+aside,
+footer,
+hgroup {
+  display: block;
 }
 
 ul,
@@ -30,18 +89,20 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
+html,
 body {
   font-family: 'Poppins', sans-serif;
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 img,
 picture {
   max-width: 100%;
   display: block;
+  overflow: hidden;
 }
 
 input,
