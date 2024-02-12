@@ -1,10 +1,11 @@
 import './Header.scss';
 import { useId } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { dataHeader } from '../../assets/data/dataHeader';
 
 const Header = () => {
   const { navLinks } = dataHeader;
+  const { pathname } = useLocation();
 
   return (
     <header className='header'>
@@ -17,7 +18,14 @@ const Header = () => {
           <ul>
             {navLinks?.map((item) => (
               <li key={useId()}>
-                <NavLink to={item.url}>{item.name}</NavLink>
+                <NavLink
+                  className={pathname === item.url ? 'active' : ''}
+                  // className={({ isActive }) => (isActive ? 'active' : '')}
+                  to={item.url}
+                  end
+                >
+                  {item.name}
+                </NavLink>
               </li>
             ))}
           </ul>
