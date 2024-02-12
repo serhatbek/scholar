@@ -91,11 +91,16 @@ html:focus-within {
 
 html,
 body {
+  background-color: slategrey;
   font-family: 'Poppins', sans-serif;
 }
 
 a {
   text-decoration: none !important;
+}
+
+button {
+  cursor: pointer;
 }
 
 img,

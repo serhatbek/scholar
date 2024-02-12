@@ -21,4 +21,8 @@ export const dataHeader = {
       url: '/scholar/contact',
     },
   ],
+  registerBtn: {
+    text: 'Register Now!',
+    link: '/scholar/',
+  },
 };

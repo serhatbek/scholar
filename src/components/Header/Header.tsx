@@ -1,11 +1,12 @@
 import './Header.scss';
 import { useId } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { dataHeader } from '../../assets/data/dataHeader';
+import { Icon } from '../../components';
 
 const Header = () => {
-  const { navLinks } = dataHeader;
-  const { pathname } = useLocation();
+  const { navLinks, registerBtn } = dataHeader;
+  // const { pathname } = useLocation();
 
   return (
     <header className='header'>
@@ -19,8 +20,8 @@ const Header = () => {
             {navLinks?.map((item) => (
               <li key={useId()}>
                 <NavLink
-                  className={pathname === item.url ? 'active' : ''}
-                  // className={({ isActive }) => (isActive ? 'active' : '')}
+                  // className={pathname === item.url ? 'active' : ''}
+                  className={({ isActive }) => (isActive ? 'active' : '')}
                   to={item.url}
                   end
                 >
@@ -28,8 +29,15 @@ const Header = () => {
                 </NavLink>
               </li>
             ))}
+            <li>
+              <Link to={registerBtn.link}>{registerBtn.text}</Link>
+            </li>
           </ul>
         </nav>
+
+        <button className='btn header__action'>
+          <Icon icon='menu-open' size='34' />
+        </button>
       </div>
     </header>
   );

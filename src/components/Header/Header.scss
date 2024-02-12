@@ -16,6 +16,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 
     #{ $self }__logo a {
       font-size: 36px;
@@ -44,10 +45,22 @@
     }
 
     #{ $self }__nav {
+      display: flex;
+      align-items: center;
+      font-weight: 300;
+
       ul {
         display: flex;
+        @include c.media(tablet) {
+          width: 100%;
+        }
 
         li {
+          &:not(:last-child) {
+            @include c.media(tablet) {
+              border-bottom: 1px solid #ddd;
+            }
+          }
           a {
             display: inline-flex;
             align-items: center;
@@ -57,13 +70,72 @@
             padding: 0 20px;
             transition: all 300ms ease-in-out;
 
+            @include c.media(tablet) {
+              width: 100%;
+              justify-content: center;
+            }
+
             &.active {
+              font-weight: 400;
               background-color: rgba(255, 255, 255, 0.1);
               opacity: 1;
               border-radius: 20px;
+
+              @include c.media(tablet) {
+                color: c.$purple;
+                background-color: c.$light-one;
+                border-radius: 0 0 25px 25px;
+              }
+            }
+
+            @include c.media(tablet) {
+              height: 50px;
+              color: c.$text-title;
+
+              &:hover {
+                color: c.$purple;
+              }
             }
           }
         }
+
+        @include c.media(tablet) {
+          flex-direction: column;
+        }
+      }
+
+      > a {
+        padding: 0 20px;
+        color: c.$white;
+        font-size: 14px;
+      }
+
+      @include c.media(tablet) {
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        max-width: 80%;
+        width: 100%;
+        top: 200px;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
+        background-color: c.$light-two;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+      }
+    }
+
+    #{$self}__action {
+      background: transparent;
+      border: none;
+      outline: none;
+      padding: 0;
+      color: c.$white;
+      display: none;
+
+      @include c.media(tablet) {
+        display: block;
       }
     }
   }
