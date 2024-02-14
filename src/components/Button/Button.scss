@@ -1,0 +1,21 @@
+@use '../../assets/css/common.scss' as c;
+
+.btn {
+  height: 50px;
+  line-height: 50px;
+  padding: 0px 25px;
+  border-radius: 25px;
+  font-weight: 500;
+  display: inline-flex;
+  border: none;
+
+  &--purple {
+    background-color: c.$purple;
+    color: c.$white;
+  }
+
+  &--white {
+    background-color: c.$white;
+    color: c.$purple;
+  }
+}

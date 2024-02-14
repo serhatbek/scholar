@@ -2,7 +2,7 @@ import './Carousel.scss';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
-import { Icon } from '..';
+import { Icon } from '../../components';
 import { ReactNode } from 'react';
 
 interface CarouselProps {
