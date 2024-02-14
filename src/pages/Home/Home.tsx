@@ -1,5 +1,5 @@
 import './Home.scss';
-import { Carousel } from '../../components';
+import { Carousel, Tag } from '../../components';
 
 const Home = () => {
   return (
@@ -8,6 +8,8 @@ const Home = () => {
         <div className='container'>
           <Carousel>
             <p>
+              <Tag text='OUR COURSES' tagClass='purple' />
+              <Tag text='OUR COURSES' tagClass='white' />
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Molestiae illum harum repellendus ducimus sunt error ipsam laborum
               repudiandae officiis illo!

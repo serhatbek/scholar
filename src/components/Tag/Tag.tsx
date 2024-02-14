@@ -7,7 +7,7 @@ interface TagProps {
 }
 
 const Tag = ({ text, tagClass }: TagProps) => {
-  return <div className={classNames(`tag, ${tagClass}`)}>{text}</div>;
+  return <span className={classNames(`tag tag--${tagClass}`)}>{text}</span>;
 };
 
 export default Tag;
