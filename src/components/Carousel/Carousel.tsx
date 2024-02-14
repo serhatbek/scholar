@@ -6,7 +6,7 @@ import { Icon } from '..';
 import { ReactNode } from 'react';
 
 interface CarouselProps {
-  className: string;
+  className?: string;
   children: ReactNode;
 }
 

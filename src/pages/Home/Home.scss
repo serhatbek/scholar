@@ -1,0 +1,8 @@
+@use '../../assets/css/common.scss' as c;
+
+.main-banner {
+  @include c.imageCacheBust('/images/banner-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
