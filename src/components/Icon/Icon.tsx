@@ -1,11 +1,17 @@
+import classNames from 'classnames';
+
 interface iconProps {
   icon: string;
   size?: string;
+  variant?: string;
 }
 
-const Icon = ({ icon, size }: iconProps) => {
+const Icon = ({ icon, size, variant }: iconProps) => {
   return (
-    <i className={`icon icon-${icon}`} style={{ fontSize: `${size}px` }}></i>
+    <i
+      className={classNames(`icon icon-${icon} icon--${variant}`)}
+      style={{ fontSize: `${size}px` }}
+    ></i>
   );
 };
 
