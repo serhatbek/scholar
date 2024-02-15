@@ -23,7 +23,7 @@ $uniqeid: unique_id();
 
 @font-face {
   font-family: 'Poppins';
-  src: url('fonts/Italic.ttf?v=#{$uniqeid}') format('truetype');
+  src: url('fonts/Poppins-Italic.ttf?v=#{$uniqeid}') format('truetype');
   font-weight: 400;
   font-style: italic;
 }

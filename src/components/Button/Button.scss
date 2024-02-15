@@ -7,6 +7,7 @@
   border-radius: 25px;
   font-weight: 500;
   display: inline-flex;
+  align-items: center;
   border: none;
 
   &--purple {
@@ -17,5 +18,10 @@
   &--white {
     background-color: c.$white;
     color: c.$purple;
+  }
+
+  &--transparent {
+    background-color: transparent;
+    color: c.$white;
   }
 }

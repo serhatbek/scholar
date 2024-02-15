@@ -1,13 +1,19 @@
 import './Home.scss';
-import { Button, Carousel, Tag } from '../../components';
+import { BannerCard, Button, Carousel, Tag } from '../../components';
+import { dataHome } from '../../assets/data/dataBannerSlider';
+import { useId } from 'react';
 
 const Home = () => {
+  const { dataBannerSlider } = dataHome;
   return (
     <>
       <section className='section main-banner'>
         <div className='container'>
           <Carousel>
-            <p>
+            <div>
+              {dataBannerSlider?.map((item) => {
+                return <BannerCard key={useId()} item={item} />;
+              })}
               <Tag text='OUR COURSES' tagClass='purple' />
               <Tag text='OUR COURSES' tagClass='white' />
               <Button btnClass='fdd' variant='purple' type={true}>
@@ -19,7 +25,7 @@ const Home = () => {
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Molestiae illum harum repellendus ducimus sunt error ipsam laborum
               repudiandae officiis illo!
-            </p>
+            </div>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Molestiae illum harum repellendus ducimus sunt error ipsam laborum
