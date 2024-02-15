@@ -10,6 +10,7 @@ interface ButtonProps {
   type?: boolean;
   iconLeft?: string;
   iconRight?: string;
+  iconClass?: string;
   size?: string;
 }
 
@@ -21,15 +22,20 @@ const Button = ({
   type,
   iconLeft,
   iconRight,
+  iconClass,
   size,
 }: ButtonProps) => {
   return (
     <>
       {href ? (
         <a className={classNames(`btn btn--${variant}`, btnClass)} href={href}>
-          {iconLeft ? <Icon icon={iconLeft} size={size} /> : null}
+          {iconLeft ? (
+            <Icon icon={iconLeft} size={size} iconClass={iconClass} />
+          ) : null}
           <span>{children}</span>
-          {iconRight ? <Icon icon={iconRight} size={size} /> : null}
+          {iconRight ? (
+            <Icon icon={iconRight} size={size} iconClass={iconClass} />
+          ) : null}
         </a>
       ) : (
         <button

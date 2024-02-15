@@ -10,6 +10,10 @@
   align-items: center;
   border: none;
 
+  > span {
+    margin: 0 10px;
+  }
+
   &--purple {
     background-color: c.$purple;
     color: c.$white;

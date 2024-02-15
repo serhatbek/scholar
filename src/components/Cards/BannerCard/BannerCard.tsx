@@ -19,8 +19,9 @@ interface itemProps {
     text: string;
     variant: string;
     url: string;
-    icon: string;
-    size: string;
+    icon?: string;
+    size?: string;
+    iconClass?: string;
   };
 }
 
@@ -37,9 +38,10 @@ const BannerCard = ({ item }: BannerCardProps) => {
         </Button>
         <Button
           variant={iconBtn.variant}
-          iconLeft={iconBtn.icon}
           href={iconBtn.url}
-          size='32'
+          iconLeft={iconBtn.icon}
+          iconClass={iconBtn.iconClass}
+          size='28'
         >
           {iconBtn.text}
         </Button>

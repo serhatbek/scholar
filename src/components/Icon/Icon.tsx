@@ -4,13 +4,13 @@ import classNames from 'classnames';
 interface iconProps {
   icon: string;
   size?: string;
-  variant?: string;
+  iconClass?: string;
 }
 
-const Icon = ({ icon, size, variant }: iconProps) => {
+const Icon = ({ icon, size, iconClass }: iconProps) => {
   return (
     <i
-      className={classNames(`icon icon-${icon} icon--${variant}`)}
+      className={classNames(`icon icon-${icon} ${iconClass}`)}
       style={{ fontSize: `${size}px` }}
     ></i>
   );

@@ -19,6 +19,7 @@ export const dataHome = {
         variant: 'transparent',
         url: '/scholar/',
         icon: 'play',
+        iconClass: 'icon--circle icon--white',
       },
     },
     {
@@ -36,6 +37,7 @@ export const dataHome = {
         variant: 'transparent',
         url: '/scholar/',
         icon: 'play',
+        iconClass: 'icon--circle icon--white',
       },
     },
     {
@@ -53,6 +55,7 @@ export const dataHome = {
         variant: 'transparent',
         url: '/scholar/',
         icon: 'play',
+        iconClass: 'icon--circle icon--white',
       },
     },
   ],

@@ -8,6 +8,8 @@ import { ReactNode } from 'react';
 interface CarouselProps {
   className?: string;
   children: ReactNode;
+  btnClass: string;
+  iconClass?: string;
 }
 
 interface CustomArrowProps {
@@ -15,19 +17,24 @@ interface CustomArrowProps {
   onClick: () => void;
 }
 
-const Carousel = ({ className, children }: CarouselProps) => {
-  const CustomNextArrow = ({ btnClass, onClick }: CustomArrowProps) => {
+const Carousel = ({
+  btnClass,
+  className,
+  children,
+  iconClass,
+}: CarouselProps) => {
+  const CustomNextArrow = ({ onClick }: CustomArrowProps) => {
     return (
       <button className={btnClass} onClick={onClick}>
-        <Icon icon='chevron-right' size='32' />
+        <Icon iconClass={iconClass} icon='chevron-right' size='32' />
       </button>
     );
   };
 
-  const CustomPrevArrow = ({ btnClass, onClick }: CustomArrowProps) => {
+  const CustomPrevArrow = ({ onClick }: CustomArrowProps) => {
     return (
       <button className={btnClass} onClick={onClick}>
-        <Icon icon='chevron-left' size='32' />
+        <Icon iconClass={iconClass} icon='chevron-left' size='32' />
       </button>
     );
   };
