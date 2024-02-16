@@ -7,6 +7,7 @@ interface BannerCardProps {
 
 interface itemProps {
   tag: string;
+  tagVariant: string;
   title: string;
   desc: string;
   img: string;
@@ -26,10 +27,10 @@ interface itemProps {
 }
 
 const BannerCard = ({ item }: BannerCardProps) => {
-  const { tag, title, desc, img, btn, iconBtn } = item;
+  const { tag, tagVariant, title, desc, img, btn, iconBtn } = item;
   return (
     <div className='banner-card' style={{ backgroundImage: `url(${img})` }}>
-      <Tag text={tag} />
+      <Tag text={tag} variant={tagVariant} />
       <h2>{title}</h2>
       <p>{desc}</p>
       <div className='banner-card__action'>

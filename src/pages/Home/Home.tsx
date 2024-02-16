@@ -10,7 +10,8 @@ const Home = () => {
       <section className='section main-banner'>
         <div className='container'>
           <Carousel
-            btnClass='btn btn--transparent'
+            className='main-carousel'
+            btnClass='btn btn--transparent main-carousel__btn'
             iconClass='icon--circle icon--purple'
           >
             {dataBannerSlider?.map((item) => {

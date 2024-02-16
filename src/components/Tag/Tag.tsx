@@ -3,11 +3,11 @@ import './Tag.scss';
 
 interface TagProps {
   text: string;
-  tagClass?: string;
+  variant?: string;
 }
 
-const Tag = ({ text, tagClass }: TagProps) => {
-  return <span className={classNames(`tag tag--${tagClass}`)}>{text}</span>;
+const Tag = ({ text, variant }: TagProps) => {
+  return <span className={classNames(`tag tag--${variant}`)}>{text}</span>;
 };
 
 export default Tag;

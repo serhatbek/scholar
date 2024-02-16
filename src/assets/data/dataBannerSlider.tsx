@@ -6,6 +6,7 @@ export const dataHome = {
   dataBannerSlider: [
     {
       tag: 'Our Courses',
+      tagVariant: 'purple',
       title: 'With Scholar Teachers, Everything Is Easier',
       desc: 'Scholar is free CSS template designed by TemplateMo for online educational related websites. This layout is based on the famous Bootstrap v5.3.0 framework.',
       img: bannerImg1,
@@ -24,6 +25,7 @@ export const dataHome = {
     },
     {
       tag: 'Best Results',
+      tagVariant: 'purple',
       title: 'Get the best result out of your effort',
       desc: 'You are allowed to use this template for any educational or commercial purpose. You are not allowed to re-distribute the template ZIP file on any other website.',
       img: bannerImg2,
@@ -42,6 +44,7 @@ export const dataHome = {
     },
     {
       tag: 'Online Learning',
+      tagVariant: 'purple',
       title: 'Online Learning helps you save the time',
       desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporious incididunt ut labore et dolore magna aliqua suspendisse.',
       img: bannerImg3,

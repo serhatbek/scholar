@@ -12,7 +12,8 @@
     color: c.$purple;
   }
   &--purple {
-    background-color: c.$purple;
+    // background-color: lighten($color: c.$purple, $amount: 5);
+    background-color: rgba(255, 255, 255, 0.2);
     color: c.$white;
   }
 }
