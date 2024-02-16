@@ -2,6 +2,10 @@ const bannerImg1 = 'images/banner-item-01.jpg';
 const bannerImg2 = 'images/banner-item-02.jpg';
 const bannerImg3 = 'images/banner-item-03.jpg';
 
+const serviceImg1 = 'images/service-01.png';
+const serviceImg2 = 'images/service-02.png';
+const serviceImg3 = 'images/service-03.png';
+
 export const dataHome = {
   dataBannerSlider: [
     {
@@ -62,4 +66,43 @@ export const dataHome = {
       },
     },
   ],
+  dataServices: {
+    title: 'Our Featured Services',
+    subtitle: 'services',
+    cards: [
+      {
+        title: 'Online Degrees',
+        desc: 'Whenever you need free templates in HTML CSS, you just remember TemplateMo website.',
+        img: serviceImg1,
+        btn: {
+          text: 'Read More',
+          url: '/scholar/',
+          variant: 'white',
+          icon: 'right-arrow-circle',
+        },
+      },
+      {
+        title: 'Short Courses',
+        desc: 'You can browse free templates based on different tags such as digital marketing, etc.',
+        img: serviceImg2,
+        btn: {
+          text: 'Read More',
+          url: '/scholar/',
+          variant: 'white',
+          icon: 'right-arrow-circle',
+        },
+      },
+      {
+        title: 'Web Experts',
+        desc: 'You can start learning HTML CSS by modifying free templates from our website too.',
+        img: serviceImg3,
+        btn: {
+          text: 'Read More',
+          url: '/scholar/',
+          variant: 'white',
+          icon: 'right-arrow-circle',
+        },
+      },
+    ],
+  },
 };

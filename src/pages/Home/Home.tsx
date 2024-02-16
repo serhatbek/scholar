@@ -1,6 +1,6 @@
 import './Home.scss';
 import { BannerCard, Carousel } from '../../components';
-import { dataHome } from '../../assets/data/dataBannerSlider';
+import { dataHome } from '../../assets/data/dataHome';
 import { useId } from 'react';
 
 const Home = () => {
