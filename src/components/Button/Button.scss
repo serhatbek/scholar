@@ -1,18 +1,15 @@
 @use '../../assets/css/common.scss' as c;
 
 .btn {
+  font-size: 14px;
   height: 50px;
-  line-height: 50px;
+  // line-height: 50px;
   padding: 0px 25px;
   border-radius: 25px;
   font-weight: 400;
   display: inline-flex;
   align-items: center;
   border: none;
-
-  > span {
-    margin: 0 10px;
-  }
 
   &--purple {
     background-color: c.$purple;
@@ -27,5 +24,10 @@
   &--transparent {
     background-color: transparent;
     color: c.$white;
+    padding: 0;
+  }
+
+  .icon {
+    margin-right: 10px;
   }
 }

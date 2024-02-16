@@ -1,0 +1,62 @@
+@use '../../assets/css/common.scss' as c;
+
+.footer {
+  background-color: c.$purple;
+  border-radius: 150px 150px 0px 0px;
+  position: relative;
+  margin-top: 150px;
+  padding: 50px 0;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+
+  @include c.media(mobile) {
+    margin-top: 30px;
+    min-height: 300px;
+  }
+
+  &::before {
+    content: '';
+    @include c.imageCacheBust('images/contact-dec-01.png');
+    position: absolute;
+    left: 30px;
+    transform: rotate(180deg);
+    opacity: 1;
+    bottom: 0;
+    width: 318px;
+    height: 119px;
+    content: '';
+    z-index: 2;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-evenly;
+
+    @include c.media(tablet) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    p {
+      font-size: 14px;
+      color: c.$white;
+
+      @include c.media(mobile) {
+        &:first-child {
+          max-width: 80%;
+          margin-bottom: 40px;
+        }
+      }
+
+      > a {
+        color: c.$white;
+
+        &:hover {
+          color: rgba($color: c.$white, $alpha: 0.7);
+        }
+      }
+    }
+  }
+}

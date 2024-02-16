@@ -58,8 +58,13 @@
 
     @include c.media(tablet) {
       flex-direction: column;
+    }
 
-      > .btn:first-child {
+    > .btn:first-child {
+      margin-right: 30px;
+
+      @include c.media(tablet) {
+        margin-right: 0;
         margin-bottom: 30px;
       }
     }

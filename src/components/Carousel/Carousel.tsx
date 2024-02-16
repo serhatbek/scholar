@@ -47,7 +47,7 @@ const Carousel = ({
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 3500,
     nextArrow: <CustomNextArrow btnClass='' onClick={() => {}} />,
     prevArrow: <CustomPrevArrow btnClass='' onClick={() => {}} />,
   };

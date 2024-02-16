@@ -7,6 +7,10 @@
   background-size: cover;
   padding: 170px 0px 120px 0px;
 
+  @include c.media(tablet) {
+    padding-top: 100px;
+  }
+
   .main-carousel {
     position: relative;
     z-index: 20;
@@ -14,19 +18,22 @@
     &__btn {
       position: absolute;
       bottom: 20px;
-      // transform: translate(-50%);
 
       &:last-child {
         left: 50%;
         z-index: 21;
-        transform: translate(-15%, 0);
+        transform: translate(0, 0);
       }
 
       &:first-child {
         right: 50%;
         z-index: 21;
-        transform: translate(15%, 0);
+        transform: translate(0, 0);
       }
     }
   }
+}
+
+.services {
+  margin-top: 80px;
 }
