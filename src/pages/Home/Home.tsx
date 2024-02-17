@@ -4,7 +4,7 @@ import { dataHome } from '../../assets/data/dataHome';
 import { useId } from 'react';
 
 const Home = () => {
-  const { dataBannerSlider } = dataHome;
+  const { dataBannerSlider, dataServices } = dataHome;
   return (
     <>
       <section className='section main-banner'>
@@ -24,8 +24,8 @@ const Home = () => {
       <section className='section services'>
         <div className='container'>
           <div className='section__heading'>
-            <h6></h6>
-            <h2></h2>
+            <h6>{dataServices.subtitle}</h6>
+            <h2>{dataServices.title}</h2>
           </div>
         </div>
       </section>
