@@ -1,5 +1,5 @@
 import './Home.scss';
-import { BannerCard, Carousel } from '../../components';
+import { BannerCard, Carousel, ServicesCard } from '../../components';
 import { dataHome } from '../../assets/data/dataHome';
 import { useId } from 'react';
 
@@ -26,6 +26,11 @@ const Home = () => {
           <div className='section__heading'>
             <h6>{dataServices.subtitle}</h6>
             <h2>{dataServices.title}</h2>
+          </div>
+          <div className='box'>
+            {dataServices?.cards?.map((item) => (
+              <ServicesCard item={item} />
+            ))}
           </div>
         </div>
       </section>
