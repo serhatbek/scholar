@@ -1,5 +1,22 @@
+@use '../../../assets/css/common.scss' as c;
+
 .services-card {
+  $self: &;
   position: relative;
+  margin-top: 95px;
+
+  &:hover {
+    #{$self}__img img {
+      margin-top: -10px;
+    }
+  }
+
+  &:hover {
+    #{$self}__body .btn {
+      background-color: c.$purple;
+      color: c.$white;
+    }
+  }
 
   &__img {
     width: 190px;
@@ -8,17 +25,23 @@
     align-items: center;
     justify-content: center;
     line-height: 190px;
-    background-color: #7a6ad8;
+    background-color: c.$purple;
     border-radius: 50%;
     position: absolute;
     right: 0;
     top: -95px;
+
+    img {
+      transition: all 0.2s;
+    }
   }
 
   &__body {
+    max-width: 336px;
+    width: 100%;
     border-radius: 25px;
     padding: 80px 30px 50px 30px;
-    background-color: #f1f0fe;
+    background-color: c.$light-two;
     margin-bottom: 30px;
     margin-right: 80px;
     transition: all 0.4s;
@@ -32,10 +55,17 @@
     }
 
     > p {
-      color: #4a4a4a;
+      color: c.$text-desc;
       margin-bottom: 25px;
       font-size: 14px;
       line-height: 28px;
+    }
+
+    .btn {
+      .icon {
+        margin-right: 0px;
+        margin-left: 5px;
+      }
     }
   }
 }

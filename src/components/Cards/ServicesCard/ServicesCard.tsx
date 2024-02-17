@@ -27,7 +27,12 @@ const ServicesCard = ({ item }: ServicesCardProps) => {
       <div className='services-card__body'>
         <h4>{title}</h4>
         <p>{desc}</p>
-        <Button href={btn.url} variant={btn.variant} iconRight={btn.icon}>
+        <Button
+          href={btn.url}
+          variant={btn.variant}
+          size='20'
+          iconRight={btn.icon}
+        >
           {btn.text}
         </Button>
       </div>

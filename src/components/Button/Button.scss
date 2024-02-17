@@ -19,6 +19,7 @@
   &--white {
     background-color: c.$white;
     color: c.$purple;
+    transition: all 0.2s ease-in-out;
   }
 
   &--transparent {
