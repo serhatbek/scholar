@@ -22,6 +22,11 @@
     transition: all 0.2s ease-in-out;
   }
 
+  &:hover.btn--hover-purple {
+    background-color: c.$purple;
+    color: c.$white;
+  }
+
   &--transparent {
     background-color: transparent;
     color: c.$white;

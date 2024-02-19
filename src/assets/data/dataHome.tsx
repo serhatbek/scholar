@@ -77,6 +77,7 @@ export const dataHome = {
         btn: {
           text: 'Read More',
           url: '/scholar/',
+          class: 'btn--hover-purple',
           variant: 'white',
           icon: 'right-arrow-circle',
         },
@@ -88,6 +89,7 @@ export const dataHome = {
         btn: {
           text: 'Read More',
           url: '/scholar/',
+          class: 'btn--hover-purple',
           variant: 'white',
           icon: 'right-arrow-circle',
         },
@@ -99,6 +101,7 @@ export const dataHome = {
         btn: {
           text: 'Read More',
           url: '/scholar/',
+          class: 'btn--hover-purple',
           variant: 'white',
           icon: 'right-arrow-circle',
         },
