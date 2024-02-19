@@ -18,11 +18,12 @@ const Accordion = ({ items }: AccordionProps) => {
     <div className='accordion'>
       {items?.map((item, index) => {
         const { title, desc } = item;
+        const isOpen = openIndex === index;
         return (
           <div
             key={index}
             className={classNames('accordion__item', {
-              open: openIndex === index,
+              open: isOpen,
             })}
           >
             <button
@@ -31,13 +32,19 @@ const Accordion = ({ items }: AccordionProps) => {
             >
               <span>{title}</span>
               <Icon
-                icon={classNames(`${openIndex === index ? 'minus' : 'plus'}`)}
+                icon={classNames(`${isOpen ? 'minus' : 'plus'}`)}
                 size='28'
               />
             </button>
-            {openIndex === index && (
+            <p
+              className='accordion__item__body'
+              style={{ maxHeight: isOpen ? '1000px' : '0' }}
+            >
+              {desc}
+            </p>
+            {/* {isOpen && (
               <p className='accordion__item__body'>{desc}</p>
-            )}
+            )} */}
           </div>
         );
       })}
