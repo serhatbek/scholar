@@ -1,10 +1,15 @@
 import './Home.scss';
-import { BannerCard, Carousel, ServicesCard } from '../../components';
+import {
+  Accordion,
+  BannerCard,
+  Carousel,
+  ServicesCard,
+} from '../../components';
 import { dataHome } from '../../assets/data/dataHome';
 import { useId } from 'react';
 
 const Home = () => {
-  const { dataBannerSlider, dataServices } = dataHome;
+  const { dataBannerSlider, dataServices, dataAccordion } = dataHome;
   return (
     <>
       <section className='section main-banner'>
@@ -29,9 +34,15 @@ const Home = () => {
           </div>
           <div className='box'>
             {dataServices?.cards?.map((item) => (
-              <ServicesCard item={item} />
+              <ServicesCard key={useId()} item={item} />
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className='section about-us'>
+        <div className='container'>
+          <Accordion items={dataAccordion} />
         </div>
       </section>
     </>
