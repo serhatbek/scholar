@@ -20,11 +20,11 @@
     background-color: c.$white;
     color: c.$purple;
     transition: all 0.2s ease-in-out;
-  }
 
-  &:hover.btn--hover-purple {
-    background-color: c.$purple;
-    color: c.$white;
+    &:hover {
+      background-color: c.$purple;
+      color: c.$white;
+    }
   }
 
   &--transparent {

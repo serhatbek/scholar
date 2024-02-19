@@ -12,7 +12,6 @@ interface itemProps {
   btn: {
     text: string;
     url: string;
-    class: string;
     variant: string;
     icon: string;
   };
@@ -29,7 +28,6 @@ const ServicesCard = ({ item }: ServicesCardProps) => {
         <h4>{title}</h4>
         <p>{desc}</p>
         <Button
-          btnClass={btn.class}
           href={btn.url}
           variant={btn.variant}
           size='20'
