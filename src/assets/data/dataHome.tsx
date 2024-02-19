@@ -105,22 +105,35 @@ export const dataHome = {
       },
     ],
   },
-  dataAccordion: [
-    {
-      title: 'Where shall we begin?',
-      desc: "Dolor almesit amet, consectetur adipiscing elit, sed doesn't eiusmod tempor incididunt ut labore consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.",
+  dataAbout: {
+    aboutSection: {
+      title: 'ABOUT US',
+      subtitle: 'What Make Us The Best Academy Online?',
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravid risus commodo.',
+      btn: {
+        text: 'Discover More',
+        url: '/scholar/',
+        variant: 'white',
+        icon: 'right-arrow-circle',
+      },
     },
-    {
-      title: 'How do we work together?',
-      desc: "Dolor almesit amet, consectetur adipiscing elit, sed doesn't eiusmod tempor incididunt ut labore consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.",
-    },
-    {
-      title: 'Why SCHOLAR is the best?',
-      desc: "Dolor almesit amet, consectetur adipiscing elit, sed doesn't eiusmod tempor incididunt ut labore consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.",
-    },
-    {
-      title: 'Do we get the best support?',
-      desc: "Dolor almesit amet, consectetur adipiscing elit, sed doesn't eiusmod tempor incididunt ut labore consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.",
-    },
-  ],
+    accordionItems: [
+      {
+        title: 'Where shall we begin?',
+        desc: "Dolor almesit amet, consectetur adipiscing elit, sed doesn't eiusmod tempor incididunt ut labore consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.",
+      },
+      {
+        title: 'How do we work together?',
+        desc: "Dolor almesit amet, consectetur adipiscing elit, sed doesn't eiusmod tempor incididunt ut labore consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.",
+      },
+      {
+        title: 'Why SCHOLAR is the best?',
+        desc: "Dolor almesit amet, consectetur adipiscing elit, sed doesn't eiusmod tempor incididunt ut labore consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.",
+      },
+      {
+        title: 'Do we get the best support?',
+        desc: "Dolor almesit amet, consectetur adipiscing elit, sed doesn't eiusmod tempor incididunt ut labore consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.",
+      },
+    ],
+  },
 };

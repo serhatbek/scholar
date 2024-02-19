@@ -13,6 +13,7 @@
   &__item {
     background-color: c.$white;
     border-radius: 40px;
+    position: relative;
 
     &:not(:last-child) {
       margin-bottom: 30px;
@@ -20,7 +21,7 @@
 
     &__header {
       width: 100%;
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 600;
       color: c.$text-title;
       border-radius: 40px;
@@ -28,6 +29,7 @@
       border: none;
       display: flex;
       justify-content: space-between;
+      align-items: center;
       padding: 15px 25px;
       outline: transparent;
       transition: all 400ms ease-out;
@@ -45,7 +47,7 @@
       line-height: 28px;
       color: c.$text-desc;
       overflow: hidden;
-      //   max-height: 0px;
+      max-height: 0px;
       border-bottom-left-radius: 40px;
       border-bottom-right-radius: 40px;
       transition: all 400ms ease-out;
@@ -62,8 +64,8 @@
       }
 
       #{$self}__item__body {
-        max-height: fit-content;
-        transition: all 800ms ease-out;
+        max-height: 1000px;
+        transition: all 400ms ease-out;
         opacity: 1;
         margin-top: 0;
       }
