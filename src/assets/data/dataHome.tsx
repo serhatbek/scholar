@@ -134,4 +134,22 @@ export const dataHome = {
       },
     ],
   },
+  dataFunFacts: [
+    {
+      count: 150,
+      text: 'Happy Students',
+    },
+    {
+      count: 804,
+      text: 'Course Hours',
+    },
+    {
+      count: 50,
+      text: 'Employed Students',
+    },
+    {
+      count: 15,
+      text: 'Years Experience',
+    },
+  ],
 };
