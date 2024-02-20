@@ -1,6 +1,8 @@
 @use '../../assets/css/common.scss' as c;
 
 .count-up {
+  margin-bottom: 50px;
+
   > span {
     display: block;
 
@@ -12,7 +14,7 @@
 
     &:last-child {
       color: c.$white;
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 500;
       margin-top: 15px;
     }

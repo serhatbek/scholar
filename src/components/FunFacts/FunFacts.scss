@@ -1,3 +1,71 @@
+@use '../../assets/css/common.scss' as c;
+
 .fun-facts {
   position: relative;
+  padding: 120px 0 80px;
+  margin-top: 150px;
+
+  @include c.media(mobile) {
+    margin-top: 70px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-left: 50px;
+
+    @include c.media(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include c.media(mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &::after {
+    @include c.imageCacheBust('images/contact-dec-01.png');
+    position: absolute;
+    left: 15%;
+    opacity: 0.5;
+    top: 0;
+    width: 318px;
+    height: 119px;
+    content: '';
+    z-index: 2;
+  }
 }
+
+// .fun-facts {
+//   position: relative;
+//   padding: 120px 0 80px;
+//   margin-top: 150px;
+
+//   @include c.media(mobile) {
+//     margin-top: 70px;
+//   }
+
+//   .container {
+//     display: flex;
+//     justify-content: space-evenly;
+//     flex-wrap: wrap;
+
+//     @include c.media(mobile) {
+//       flex-direction: column;
+//       align-items: center;
+//       justify-content: flex-start;
+//     }
+//   }
+
+//   &::after {
+//     @include c.imageCacheBust('images/contact-dec-01.png');
+//     position: absolute;
+//     left: 15%;
+//     opacity: 0.5;
+//     top: 0;
+//     width: 318px;
+//     height: 119px;
+//     content: '';
+//     z-index: 2;
+//   }
+// }
