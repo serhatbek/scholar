@@ -121,7 +121,7 @@
     grid-template-columns: repeat(4, 1fr);
     padding-left: 50px;
 
-    @include c.media(tablet) {
+    @include c.media(tablet-wide) {
       grid-template-columns: repeat(2, 1fr);
     }
 

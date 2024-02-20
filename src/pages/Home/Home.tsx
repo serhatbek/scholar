@@ -5,6 +5,7 @@ import {
   Button,
   Carousel,
   ServicesCard,
+  SocialIcon,
 } from '../../components';
 import { dataHome } from '../../assets/data/dataHome';
 import { useId } from 'react';
@@ -70,6 +71,12 @@ const Home = () => {
           {dataFunFacts?.map((item) => (
             <CountUp key={useId()} item={item} />
           ))}
+        </div>
+      </section>
+
+      <section className='team'>
+        <div className='container'>
+          <SocialIcon icon='twitter' size='20' />
         </div>
       </section>
     </>
