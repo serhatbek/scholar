@@ -76,7 +76,7 @@ const Home = () => {
 
       <section className='team'>
         <div className='container'>
-          <SocialIcon icon='twitter' size='20' />
+          <SocialIcon href='' icon='twitter' />
         </div>
       </section>
     </>

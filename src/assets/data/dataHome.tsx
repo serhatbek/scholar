@@ -6,6 +6,11 @@ const serviceImg1 = 'images/service-01.png';
 const serviceImg2 = 'images/service-02.png';
 const serviceImg3 = 'images/service-03.png';
 
+const teamMember1 = 'images/member-01.jpg';
+const teamMember2 = 'images/member-02.jpg';
+const teamMember3 = 'images/member-03.jpg';
+const teamMember4 = 'images/member-04.jpg';
+
 export const dataHome = {
   dataBannerSlider: [
     {
@@ -150,6 +155,84 @@ export const dataHome = {
     {
       count: 15,
       text: 'Years Experience',
+    },
+  ],
+  dataTeam: [
+    {
+      img: teamMember1,
+      job: 'UX Teacher',
+      name: 'Andre Fletcher',
+      socials: [
+        {
+          icon: 'facebook',
+          url: '/scholar/',
+        },
+        {
+          icon: 'twitter',
+          url: '/scholar/',
+        },
+        {
+          icon: 'linkedin',
+          url: '/scholar/',
+        },
+      ],
+    },
+    {
+      img: teamMember2,
+      job: 'Graphic Teacher',
+      name: 'Travis Doyle',
+      socials: [
+        {
+          icon: 'facebook',
+          url: '/scholar/',
+        },
+        {
+          icon: 'twitter',
+          url: '/scholar/',
+        },
+        {
+          icon: 'linkedin',
+          url: '/scholar/',
+        },
+      ],
+    },
+    {
+      img: teamMember3,
+      job: 'Full Stack Master',
+      name: 'Miguel Scott',
+      socials: [
+        {
+          icon: 'facebook',
+          url: '/scholar/',
+        },
+        {
+          icon: 'twitter',
+          url: '/scholar/',
+        },
+        {
+          icon: 'linkedin',
+          url: '/scholar/',
+        },
+      ],
+    },
+    {
+      img: teamMember4,
+      job: 'Digital Animator',
+      name: 'Gilbert Mann',
+      socials: [
+        {
+          icon: 'facebook',
+          url: '/scholar/',
+        },
+        {
+          icon: 'twitter',
+          url: '/scholar/',
+        },
+        {
+          icon: 'linkedin',
+          url: '/scholar/',
+        },
+      ],
     },
   ],
 };
