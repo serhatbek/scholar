@@ -6,13 +6,15 @@ import {
   Carousel,
   ServicesCard,
   SocialIcon,
+  TeamCard,
 } from '../../components';
 import { dataHome } from '../../assets/data/dataHome';
 import { useId } from 'react';
 import { CountUp } from '../../components';
 
 const Home = () => {
-  const { dataBannerSlider, dataServices, dataAbout, dataFunFacts } = dataHome;
+  const { dataBannerSlider, dataServices, dataAbout, dataFunFacts, dataTeam } =
+    dataHome;
   return (
     <>
       <section className='section main-banner'>
@@ -76,7 +78,9 @@ const Home = () => {
 
       <section className='team'>
         <div className='container'>
-          <SocialIcon href='#' icon='twitter' />
+          {dataTeam?.map((item) => (
+            <TeamCard item={item} />
+          ))}
         </div>
       </section>
     </>
