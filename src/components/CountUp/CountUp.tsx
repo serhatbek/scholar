@@ -1,3 +1,4 @@
+import './CountUp.scss';
 import CountUpRC from 'react-countup';
 
 interface CountUpProps {
