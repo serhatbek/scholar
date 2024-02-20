@@ -4,11 +4,11 @@ import {
   BannerCard,
   Button,
   Carousel,
-  FunFacts,
   ServicesCard,
 } from '../../components';
 import { dataHome } from '../../assets/data/dataHome';
 import { useId } from 'react';
+import { CountUp } from '../../components';
 
 const Home = () => {
   const { dataBannerSlider, dataServices, dataAbout, dataFunFacts } = dataHome;
@@ -65,7 +65,13 @@ const Home = () => {
         </div>
       </section>
 
-      <FunFacts items={dataFunFacts} />
+      <section className='section fun-facts section--left-purple'>
+        <div className='container'>
+          {dataFunFacts?.map((item) => (
+            <CountUp key={useId()} item={item} />
+          ))}
+        </div>
+      </section>
     </>
   );
 };
