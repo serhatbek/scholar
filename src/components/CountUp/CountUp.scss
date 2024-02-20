@@ -1,0 +1,20 @@
+@use '../../assets/css/common.scss' as c;
+
+.count-up {
+  > span {
+    display: block;
+
+    &:first-child {
+      color: c.$white;
+      font-size: 48px;
+      font-weight: 700;
+    }
+
+    &:last-child {
+      color: c.$white;
+      font-size: 15px;
+      font-weight: 500;
+      margin-top: 15px;
+    }
+  }
+}

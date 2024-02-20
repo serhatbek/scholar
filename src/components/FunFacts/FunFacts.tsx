@@ -10,7 +10,7 @@ interface FunFactsProps {
 
 const FunFacts = ({ items }: FunFactsProps) => {
   return (
-    <section className='section fun-facts'>
+    <section className='section fun-facts section--left-purple'>
       <div className='container'>
         {items?.map((item) => (
           <CountUp item={item} />

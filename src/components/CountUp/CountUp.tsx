@@ -13,8 +13,8 @@ interface itemProps {
 const CountUp = ({ item }: CountUpProps) => {
   const { count, text } = item;
   return (
-    <div className='counter'>
-      <CountUpRC end={count} duration={2.75} suffix=' left' />
+    <div className='count-up'>
+      <CountUpRC end={count} duration={2.75} suffix=' +' />
       <span>{text}</span>
     </div>
   );

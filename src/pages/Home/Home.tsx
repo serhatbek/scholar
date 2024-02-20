@@ -4,13 +4,14 @@ import {
   BannerCard,
   Button,
   Carousel,
+  FunFacts,
   ServicesCard,
 } from '../../components';
 import { dataHome } from '../../assets/data/dataHome';
 import { useId } from 'react';
 
 const Home = () => {
-  const { dataBannerSlider, dataServices, dataAbout } = dataHome;
+  const { dataBannerSlider, dataServices, dataAbout, dataFunFacts } = dataHome;
   return (
     <>
       <section className='section main-banner'>
@@ -41,7 +42,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='section about-us section--right-colored'>
+      <section className='section about-us section--right-gray'>
         <div className='container'>
           <Accordion items={dataAbout.accordionItems} />
           <div className='about-us__right'>
@@ -63,6 +64,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <FunFacts items={dataFunFacts} />
     </>
   );
 };
