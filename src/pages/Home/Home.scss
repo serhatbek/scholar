@@ -85,6 +85,13 @@
           margin-right: 0;
           margin-left: 5px;
         }
+
+        @include c.media(tablet-wide) {
+          .btn {
+            background-color: c.$purple;
+            color: c.$white;
+          }
+        }
       }
 
       @include c.media(tablet-wide) {

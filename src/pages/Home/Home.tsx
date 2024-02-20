@@ -3,14 +3,13 @@ import {
   Accordion,
   BannerCard,
   Button,
+  CountUp,
   Carousel,
   ServicesCard,
-  SocialIcon,
   TeamCard,
 } from '../../components';
 import { dataHome } from '../../assets/data/dataHome';
 import { useId } from 'react';
-import { CountUp } from '../../components';
 
 const Home = () => {
   const { dataBannerSlider, dataServices, dataAbout, dataFunFacts, dataTeam } =
@@ -79,7 +78,7 @@ const Home = () => {
       <section className='team'>
         <div className='container'>
           {dataTeam?.map((item) => (
-            <TeamCard item={item} />
+            <TeamCard key={useId()} item={item} />
           ))}
         </div>
       </section>
