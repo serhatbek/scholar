@@ -106,16 +106,14 @@ export const dataHome = {
     ],
   },
   dataAbout: {
-    aboutSection: {
-      title: 'ABOUT US',
-      subtitle: 'What Make Us The Best Academy Online?',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravid risus commodo.',
-      btn: {
-        text: 'Discover More',
-        url: '/scholar/',
-        variant: 'white',
-        icon: 'right-arrow-circle',
-      },
+    subtitle: 'ABOUT US',
+    title: 'What Make Us The Best Academy Online?',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravid risus commodo.',
+    btn: {
+      text: 'Discover More',
+      url: '/scholar/',
+      variant: 'white',
+      icon: 'right-arrow-circle',
     },
     accordionItems: [
       {

@@ -33,7 +33,7 @@ const Accordion = ({ items }: AccordionProps) => {
               <span>{title}</span>
               <Icon
                 icon={classNames(`${isOpen ? 'minus' : 'plus'}`)}
-                size='28'
+                size='24'
               />
             </button>
             <p

@@ -2,6 +2,7 @@ import './Home.scss';
 import {
   Accordion,
   BannerCard,
+  Button,
   Carousel,
   ServicesCard,
 } from '../../components';
@@ -40,9 +41,26 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='section about-us'>
+      <section className='section about-us section--right-colored'>
         <div className='container'>
           <Accordion items={dataAbout.accordionItems} />
+          <div className='about-us__right'>
+            <div className='section__heading'>
+              <h6>{dataAbout.subtitle}</h6>
+              <h2>{dataAbout.title}</h2>
+            </div>
+            <p>{dataAbout.desc}</p>
+            <div className='about-us__right__action'>
+              <Button
+                variant={dataAbout.btn.variant}
+                href={dataAbout.btn.url}
+                iconRight={dataAbout.btn.icon}
+                size='20'
+              >
+                {dataAbout.btn.text}
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
     </>

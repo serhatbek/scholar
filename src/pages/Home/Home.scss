@@ -53,19 +53,59 @@
 }
 
 .about-us {
+  $self: &;
   position: relative;
+  margin-top: 130px;
 
-  &:before {
-    content: '';
-    width: 84%;
-    height: 100%;
-    background-color: #f1f0fe;
-    border-top-left-radius: 500px;
-    border-bottom-left-radius: 500px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
+  .container {
+    display: flex;
+
+    > div {
+      width: 50%;
+    }
+
+    .accordion {
+      margin-top: -40px;
+      margin-bottom: -40px;
+    }
+
+    #{$self}__right {
+      margin-left: 60px;
+      padding: 30px 0;
+      .section__heading {
+        margin-bottom: 20px;
+      }
+
+      > p {
+        font-size: 14px;
+        line-height: 28px;
+        margin-bottom: 50px;
+        color: c.$text-desc;
+      }
+
+      &__action {
+        .icon {
+          margin-right: 0;
+          margin-left: 5px;
+        }
+      }
+
+      @include c.media(tablet-wide) {
+        margin-top: 100px;
+        margin-left: 0;
+        padding: 0 20px;
+      }
+    }
+
+    @include c.media(tablet-wide) {
+      flex-direction: column;
+      padding-right: calc(20px * 0.5);
+      padding-left: calc(20px * 0.5);
+      margin-top: 100px;
+
+      > div {
+        width: 100%;
+      }
+    }
   }
 }
