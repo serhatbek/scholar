@@ -1,0 +1,12 @@
+@use '../../assets/css/common.scss' as c;
+
+.banner {
+  background-color: c.$purple;
+  padding: 150px 0 100px;
+
+  .container {
+    .section__heading {
+      text-align: center;
+    }
+  }
+}

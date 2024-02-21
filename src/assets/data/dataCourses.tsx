@@ -1,4 +1,4 @@
-const dataCourses = {
+export const dataCourses = {
   dataBreadcrumb: [
     {
       label: 'Home',
@@ -9,4 +9,5 @@ const dataCourses = {
       url: '#',
     },
   ],
+  title: 'Courses',
 };

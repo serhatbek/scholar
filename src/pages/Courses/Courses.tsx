@@ -1,5 +1,13 @@
+import { dataCourses } from '../../assets/data/dataCourses';
+import { Banner } from '../../components';
+
 const Courses = () => {
-  return <div>Courses</div>;
+  const { dataBreadcrumb, title } = dataCourses;
+  return (
+    <>
+      <Banner title={title} items={dataBreadcrumb} />
+    </>
+  );
 };
 
 export default Courses;

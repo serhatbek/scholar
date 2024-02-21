@@ -8,7 +8,6 @@ import {
   ServicesCard,
   TeamCard,
   TestimonialCard,
-  Breadcrumb,
 } from '../../components';
 import { dataHome } from '../../assets/data/dataHome';
 import { useId } from 'react';
@@ -21,7 +20,6 @@ const Home = () => {
     dataFunFacts,
     dataTeam,
     dataTestimonials,
-    dataBreadcrumb,
   } = dataHome;
   return (
     <>
@@ -116,8 +114,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      <Breadcrumb items={dataBreadcrumb} />
     </>
   );
 };

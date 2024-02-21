@@ -24,6 +24,12 @@
       font-weight: 600;
       margin-bottom: 20px;
     }
+
+    &--white {
+      > h2 {
+        color: c.$white;
+      }
+    }
   }
 
   &__desc {
