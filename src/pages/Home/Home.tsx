@@ -98,8 +98,8 @@ const Home = () => {
         <div className='container'>
           <Carousel
             className='testimonials-carousel'
-            btnClass='btn testimonials-carousel__btn'
-            iconClass='icon--circle icon--transparent'
+            btnClass='btn'
+            iconClass='icon--circle icon--white'
           >
             {dataTestimonials?.cards?.map((item) => (
               <TestimonialCard key={useId()} item={item} />

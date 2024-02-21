@@ -159,5 +159,49 @@
 }
 
 .testimonials {
+  $self: &;
   position: relative;
+
+  .container {
+    display: flex;
+
+    > div {
+      width: 50%;
+    }
+
+    #{$self}__right {
+      margin-left: 60px;
+      padding: 30px 0;
+      .section__heading {
+        margin-bottom: 20px;
+      }
+
+      @include c.media(tablet-wide) {
+        margin-top: 100px;
+        margin-left: 0;
+        padding: 0 20px;
+      }
+    }
+
+    .testimonials-carousel {
+      .btn {
+        padding: 0;
+
+        .icon {
+          margin: 0;
+        }
+      }
+    }
+
+    @include c.media(tablet-wide) {
+      flex-direction: column;
+      padding-right: calc(20px * 0.5);
+      padding-left: calc(20px * 0.5);
+      margin-top: 100px;
+
+      > div {
+        width: 100%;
+      }
+    }
+  }
 }

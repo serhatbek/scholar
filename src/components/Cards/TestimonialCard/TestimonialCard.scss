@@ -1,0 +1,44 @@
+@use '../../../assets/css/common.scss' as c;
+
+.testimonial__card {
+  background-color: c.$purple;
+  border-radius: 25px;
+  padding: 80px;
+
+  > p {
+    font-size: 18px;
+    line-height: 40px;
+    color: c.$white;
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 40px;
+  }
+
+  > div {
+    display: flex;
+
+    > figure {
+      width: 100px;
+      height: 100px;
+      margin-right: 25px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    > div {
+      span {
+        display: inline-block;
+        margin-top: 20px;
+        font-size: 15px;
+        color: c.$white;
+      }
+
+      h4 {
+        color: c.$white;
+        font-size: 22px;
+        font-weight: 600;
+        margin-top: 8px;
+      }
+    }
+  }
+}
