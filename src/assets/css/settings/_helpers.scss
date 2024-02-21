@@ -26,6 +26,13 @@
     }
   }
 
+  &__desc {
+    font-size: 14px;
+    line-height: 28px;
+    margin-bottom: 50px;
+    color: c.$text-desc;
+  }
+
   &--right-gray {
     &:before {
       content: '';

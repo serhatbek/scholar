@@ -12,8 +12,14 @@ import { dataHome } from '../../assets/data/dataHome';
 import { useId } from 'react';
 
 const Home = () => {
-  const { dataBannerSlider, dataServices, dataAbout, dataFunFacts, dataTeam } =
-    dataHome;
+  const {
+    dataBannerSlider,
+    dataServices,
+    dataAbout,
+    dataFunFacts,
+    dataTeam,
+    dataTestimonials,
+  } = dataHome;
   return (
     <>
       <section className='section main-banner'>
@@ -52,7 +58,7 @@ const Home = () => {
               <h6>{dataAbout.subtitle}</h6>
               <h2>{dataAbout.title}</h2>
             </div>
-            <p>{dataAbout.desc}</p>
+            <p className='section__desc'>{dataAbout.desc}</p>
             <div className='about-us__right__action'>
               <Button
                 variant={dataAbout.btn.variant}
@@ -84,6 +90,18 @@ const Home = () => {
           {dataTeam?.cards?.map((item) => (
             <TeamCard key={useId()} item={item} />
           ))}
+        </div>
+      </section>
+
+      <section className='section testimonials section--right-gray'>
+        <div className='container'>
+          <div className='testimonials__right'>
+            <div className='section__heading'>
+              <h6>{dataTestimonials.subtitle}</h6>
+              <h2>{dataTestimonials.title}</h2>
+            </div>
+            <p className='section__desc'>{dataTestimonials.desc}</p>
+          </div>
         </div>
       </section>
     </>

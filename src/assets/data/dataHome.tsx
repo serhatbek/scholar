@@ -239,4 +239,9 @@ export const dataHome = {
       },
     ],
   },
+  dataTestimonials: {
+    subtitle: 'ABOUT US',
+    title: 'What Make Us The Best Academy Online?',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravid risus commodo.',
+  },
 };
