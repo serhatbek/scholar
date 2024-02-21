@@ -8,6 +8,7 @@ import {
   ServicesCard,
   TeamCard,
   TestimonialCard,
+  Breadcrumb,
 } from '../../components';
 import { dataHome } from '../../assets/data/dataHome';
 import { useId } from 'react';
@@ -20,6 +21,7 @@ const Home = () => {
     dataFunFacts,
     dataTeam,
     dataTestimonials,
+    dataBreadcrumb,
   } = dataHome;
   return (
     <>
@@ -39,8 +41,8 @@ const Home = () => {
 
       <section className='section services'>
         <div className='section__heading'>
-          <h6>{dataServices.subtitle}</h6>
-          <h2>{dataServices.title}</h2>
+          <h6>{dataServices?.subtitle}</h6>
+          <h2>{dataServices?.title}</h2>
         </div>
         <div className='container'>
           <div className='box'>
@@ -53,21 +55,21 @@ const Home = () => {
 
       <section className='section about-us section--right-gray'>
         <div className='container'>
-          <Accordion items={dataAbout.accordionItems} />
+          <Accordion items={dataAbout?.accordionItems} />
           <div className='about-us__right'>
             <div className='section__heading'>
-              <h6>{dataAbout.subtitle}</h6>
-              <h2>{dataAbout.title}</h2>
+              <h6>{dataAbout?.subtitle}</h6>
+              <h2>{dataAbout?.title}</h2>
             </div>
-            <p className='section__desc'>{dataAbout.desc}</p>
+            <p className='section__desc'>{dataAbout?.desc}</p>
             <div className='about-us__right__action'>
               <Button
-                variant={dataAbout.btn.variant}
-                href={dataAbout.btn.url}
-                iconRight={dataAbout.btn.icon}
+                variant={dataAbout?.btn.variant}
+                href={dataAbout?.btn.url}
+                iconRight={dataAbout?.btn.icon}
                 size='20'
               >
-                {dataAbout.btn.text}
+                {dataAbout?.btn.text}
               </Button>
             </div>
           </div>
@@ -84,8 +86,8 @@ const Home = () => {
 
       <section className='section team'>
         <div className='section__heading'>
-          <h6>{dataTeam.subtitle}</h6>
-          <h2>{dataTeam.title}</h2>
+          <h6>{dataTeam?.subtitle}</h6>
+          <h2>{dataTeam?.title}</h2>
         </div>
         <div className='container'>
           {dataTeam?.cards?.map((item) => (
@@ -107,13 +109,15 @@ const Home = () => {
           </Carousel>
           <div className='testimonials__right'>
             <div className='section__heading'>
-              <h6>{dataTestimonials.subtitle}</h6>
-              <h2>{dataTestimonials.title}</h2>
+              <h6>{dataTestimonials?.subtitle}</h6>
+              <h2>{dataTestimonials?.title}</h2>
             </div>
-            <p className='section__desc'>{dataTestimonials.desc}</p>
+            <p className='section__desc'>{dataTestimonials?.desc}</p>
           </div>
         </div>
       </section>
+
+      <Breadcrumb items={dataBreadcrumb} />
     </>
   );
 };

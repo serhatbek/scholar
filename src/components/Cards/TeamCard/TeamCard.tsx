@@ -1,3 +1,4 @@
+import { useId } from 'react';
 import { SocialIcon } from '../..';
 import './TeamCard.scss';
 
@@ -28,7 +29,7 @@ const TeamCard = ({ item }: TeamCardProps) => {
       <div className='team-card__social'>
         {socials?.map((item) => {
           const { icon, url } = item;
-          return <SocialIcon icon={icon} href={url} />;
+          return <SocialIcon key={useId()} icon={icon} href={url} />;
         })}
       </div>
     </div>

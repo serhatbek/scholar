@@ -14,6 +14,16 @@ const teamMember4 = 'images/member-04.jpg';
 const testimonialAuthor = 'images/testimonial-author.jpg';
 
 export const dataHome = {
+  dataBreadcrumb: [
+    {
+      label: 'Home',
+      url: '/scholar/',
+    },
+    {
+      label: 'Courses',
+      url: '#',
+    },
+  ],
   dataBannerSlider: [
     {
       tag: 'Our Courses',
