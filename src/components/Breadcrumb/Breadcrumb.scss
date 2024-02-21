@@ -1,1 +1,26 @@
 @use '../../assets/css/common.scss' as c;
+
+.breadcrumb {
+  ul {
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+
+    > li:not(:last-child) {
+      margin-right: 5px;
+    }
+
+    > li a,
+    .icon {
+      color: c.$white;
+    }
+
+    .icon {
+      margin-left: 3px;
+    }
+
+    > li span {
+      color: lighten($color: c.$text-title, $amount: 0.9);
+    }
+  }
+}

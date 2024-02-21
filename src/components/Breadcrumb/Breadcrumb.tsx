@@ -1,6 +1,7 @@
 import { useId } from 'react';
 import './Breadcrumb.scss';
 import { NavLink } from 'react-router-dom';
+import { Icon } from '../../components';
 
 interface BreadcrumbProps {
   items: itemProps[];
@@ -22,7 +23,10 @@ const Breadcrumb = ({ items }: BreadcrumbProps) => {
               {index === items.length - 1 ? (
                 <span>{label}</span>
               ) : (
-                <NavLink to={url}>{label}</NavLink>
+                <NavLink to={url}>
+                  {label}
+                  <Icon icon='chevron-right' />
+                </NavLink>
               )}
             </li>
           );
