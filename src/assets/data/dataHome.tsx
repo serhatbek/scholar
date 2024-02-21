@@ -157,82 +157,86 @@ export const dataHome = {
       text: 'Years Experience',
     },
   ],
-  dataTeam: [
-    {
-      img: teamMember1,
-      job: 'UX Teacher',
-      name: 'Andre Fletcher',
-      socials: [
-        {
-          icon: 'facebook',
-          url: '/scholar/',
-        },
-        {
-          icon: 'twitter',
-          url: '/scholar/',
-        },
-        {
-          icon: 'linkedin',
-          url: '/scholar/',
-        },
-      ],
-    },
-    {
-      img: teamMember2,
-      job: 'Graphic Teacher',
-      name: 'Travis Doyle',
-      socials: [
-        {
-          icon: 'facebook',
-          url: '/scholar/',
-        },
-        {
-          icon: 'twitter',
-          url: '/scholar/',
-        },
-        {
-          icon: 'linkedin',
-          url: '/scholar/',
-        },
-      ],
-    },
-    {
-      img: teamMember3,
-      job: 'Full Stack Master',
-      name: 'Miguel Scott',
-      socials: [
-        {
-          icon: 'facebook',
-          url: '/scholar/',
-        },
-        {
-          icon: 'twitter',
-          url: '/scholar/',
-        },
-        {
-          icon: 'linkedin',
-          url: '/scholar/',
-        },
-      ],
-    },
-    {
-      img: teamMember4,
-      job: 'Digital Animator',
-      name: 'Gilbert Mann',
-      socials: [
-        {
-          icon: 'facebook',
-          url: '/scholar/',
-        },
-        {
-          icon: 'twitter',
-          url: '/scholar/',
-        },
-        {
-          icon: 'linkedin',
-          url: '/scholar/',
-        },
-      ],
-    },
-  ],
+  dataTeam: {
+    title: 'Our Solution-Oriented Team',
+    subtitle: 'team',
+    cards: [
+      {
+        img: teamMember1,
+        job: 'UX Teacher',
+        name: 'Andre Fletcher',
+        socials: [
+          {
+            icon: 'facebook',
+            url: '/scholar/',
+          },
+          {
+            icon: 'twitter',
+            url: '/scholar/',
+          },
+          {
+            icon: 'linkedin',
+            url: '/scholar/',
+          },
+        ],
+      },
+      {
+        img: teamMember2,
+        job: 'Graphic Teacher',
+        name: 'Travis Doyle',
+        socials: [
+          {
+            icon: 'facebook',
+            url: '/scholar/',
+          },
+          {
+            icon: 'twitter',
+            url: '/scholar/',
+          },
+          {
+            icon: 'linkedin',
+            url: '/scholar/',
+          },
+        ],
+      },
+      {
+        img: teamMember3,
+        job: 'Full Stack Master',
+        name: 'Miguel Scott',
+        socials: [
+          {
+            icon: 'facebook',
+            url: '/scholar/',
+          },
+          {
+            icon: 'twitter',
+            url: '/scholar/',
+          },
+          {
+            icon: 'linkedin',
+            url: '/scholar/',
+          },
+        ],
+      },
+      {
+        img: teamMember4,
+        job: 'Digital Animator',
+        name: 'Gilbert Mann',
+        socials: [
+          {
+            icon: 'facebook',
+            url: '/scholar/',
+          },
+          {
+            icon: 'twitter',
+            url: '/scholar/',
+          },
+          {
+            icon: 'linkedin',
+            url: '/scholar/',
+          },
+        ],
+      },
+    ],
+  },
 };

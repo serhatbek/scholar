@@ -1,0 +1,48 @@
+@use '../../../assets/css/common.scss' as c;
+
+.team-card {
+  position: relative;
+  border-radius: 25px;
+  padding: 140px 30px 40px 30px;
+  background-color: c.$light-two;
+  text-align: center;
+  max-width: 306px;
+  width: 100%;
+  margin: 130px 0 50px;
+
+  > figure {
+    max-width: 220px;
+    border-radius: 50%;
+    position: absolute;
+    top: -110px;
+    left: 50%;
+    transform: translateX(-110px);
+    transition: all 0.3s;
+
+    > img {
+      border-radius: 50%;
+    }
+  }
+
+  &:hover figure {
+    top: -120px;
+  }
+
+  > span {
+    color: #7a6ad8;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  > h4 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  &__social {
+    a {
+      margin: 0 5px;
+    }
+  }
+}

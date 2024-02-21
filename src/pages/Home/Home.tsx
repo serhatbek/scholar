@@ -75,9 +75,13 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='team'>
+      <section className='section team'>
+        <div className='section__heading'>
+          <h6>{dataTeam.subtitle}</h6>
+          <h2>{dataTeam.title}</h2>
+        </div>
         <div className='container'>
-          {dataTeam?.map((item) => (
+          {dataTeam?.cards?.map((item) => (
             <TeamCard key={useId()} item={item} />
           ))}
         </div>

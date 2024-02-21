@@ -149,3 +149,18 @@
     z-index: 2;
   }
 }
+
+.team {
+  $self: &;
+  margin-top: 100px;
+  .section__heading {
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
