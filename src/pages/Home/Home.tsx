@@ -7,6 +7,7 @@ import {
   Carousel,
   ServicesCard,
   TeamCard,
+  TestimonialCard,
 } from '../../components';
 import { dataHome } from '../../assets/data/dataHome';
 import { useId } from 'react';
@@ -95,6 +96,15 @@ const Home = () => {
 
       <section className='section testimonials section--right-gray'>
         <div className='container'>
+          <Carousel
+            className='testimonials-carousel'
+            btnClass='btn testimonials-carousel__btn'
+            iconClass='icon--circle icon--transparent'
+          >
+            {dataTestimonials?.cards?.map((item) => (
+              <TestimonialCard key={useId()} item={item} />
+            ))}
+          </Carousel>
           <div className='testimonials__right'>
             <div className='section__heading'>
               <h6>{dataTestimonials.subtitle}</h6>
