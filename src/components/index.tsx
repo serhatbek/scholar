@@ -8,5 +8,6 @@ export { default as Tag } from './Tag/Tag';
 export { default as Button } from './Button/Button';
 export { default as Accordion } from './Accordion/Accordion';
 export { default as CountUp } from './CountUp/CountUp';
+export { default as Breadcrumb } from './Breadcrumb/Breadcrumb';
 
 export * from './Cards';

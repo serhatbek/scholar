@@ -5,6 +5,10 @@
   border-radius: 25px;
   padding: 80px;
 
+  @include c.media(tablet-wide) {
+    padding: 40px 40px 60px 40px;
+  }
+
   > p {
     font-size: 18px;
     line-height: 40px;
@@ -16,6 +20,10 @@
 
   > div {
     display: flex;
+
+    @include c.media(mobile) {
+      flex-direction: column;
+    }
 
     > figure {
       width: 100px;
