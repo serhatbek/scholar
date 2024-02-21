@@ -11,6 +11,8 @@ const teamMember2 = 'images/member-02.jpg';
 const teamMember3 = 'images/member-03.jpg';
 const teamMember4 = 'images/member-04.jpg';
 
+const testimonialAuthor = 'images/testimonial-author.jpg';
+
 export const dataHome = {
   dataBannerSlider: [
     {
@@ -243,5 +245,25 @@ export const dataHome = {
     subtitle: 'ABOUT US',
     title: 'What Make Us The Best Academy Online?',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravid risus commodo.',
+    cards: [
+      {
+        text: '“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravid.”',
+        img: testimonialAuthor,
+        job: 'UI Expert',
+        name: 'Thomas Jefferson',
+      },
+      {
+        text: '“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravid.”',
+        img: testimonialAuthor,
+        job: 'Full Stack Master',
+        name: 'Claude David',
+      },
+      {
+        text: '“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravid.”',
+        img: testimonialAuthor,
+        job: 'Digital Animator',
+        name: 'Stella Blair',
+      },
+    ],
   },
 };
