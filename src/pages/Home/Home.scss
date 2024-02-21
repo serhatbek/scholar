@@ -161,9 +161,11 @@
 .testimonials {
   $self: &;
   position: relative;
+  padding: 80px 0;
 
   .container {
     display: flex;
+    align-items: center;
 
     > div {
       width: 50%;
@@ -184,11 +186,48 @@
     }
 
     .testimonials-carousel {
-      .btn {
+      position: relative;
+
+      &__btn {
+        position: absolute;
+        bottom: 20px;
         padding: 0;
 
         .icon {
           margin: 0;
+        }
+
+        &:last-child {
+          right: 0;
+          top: 52%;
+          z-index: 21;
+          transform: translate(50%, 0);
+        }
+
+        &:first-child {
+          right: 0;
+          bottom: 52%;
+          z-index: 21;
+          transform: translate(50%, 0);
+        }
+
+        @include c.media(tablet-wide) {
+          margin: 0 10px;
+          &:last-child {
+            left: 50%;
+            bottom: 0;
+            right: initial;
+            top: initial;
+            z-index: 21;
+            transform: translate(0, 50%);
+          }
+
+          &:first-child {
+            right: 50%;
+            bottom: 0;
+            z-index: 21;
+            transform: translate(0, 50%);
+          }
         }
       }
     }

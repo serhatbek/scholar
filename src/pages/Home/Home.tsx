@@ -98,7 +98,7 @@ const Home = () => {
         <div className='container'>
           <Carousel
             className='testimonials-carousel'
-            btnClass='btn'
+            btnClass='btn testimonials-carousel__btn'
             iconClass='icon--circle icon--white'
           >
             {dataTestimonials?.cards?.map((item) => (
