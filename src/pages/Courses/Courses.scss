@@ -1,0 +1,37 @@
+@use '../../assets/css/common.scss' as c;
+
+.event-filter {
+  $self: &;
+  .container {
+    display: flex;
+    justify-content: center;
+
+    #{$self}__action {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 80px 0;
+
+      @include c.media(mobile) {
+        padding: 50px 0px;
+      }
+
+      > button {
+        padding: 5px 16px;
+        background: c.$white;
+        border-radius: 20px;
+        color: c.$purple;
+        margin: 0px 10px 10px;
+        border: 1px solid c.$purple;
+        transition: all 0.3s;
+        font-size: 14px;
+        font-weight: 500;
+
+        &:hover {
+          background: c.$purple;
+          color: c.$white;
+          border: 1px solid c.$purple;
+        }
+      }
+    }
+  }
+}
