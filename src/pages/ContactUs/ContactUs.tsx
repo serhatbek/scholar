@@ -1,7 +1,14 @@
+import { dataContact } from '../../assets/data/dataContact';
+import { Banner } from '../../components';
 import './ContactUs.scss';
 
 const ContactUs = () => {
-  return <div>ContactUs</div>;
+  const { dataBreadcrumb, title } = dataContact;
+  return (
+    <>
+      <Banner title={title} items={dataBreadcrumb} />
+    </>
+  );
 };
 
 export default ContactUs;
