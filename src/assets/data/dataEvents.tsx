@@ -1,4 +1,5 @@
 export const dataEvents = {
+  bannerTitle: 'Events',
   dataBreadcrumb: [
     {
       label: 'Home',
@@ -9,5 +10,8 @@ export const dataEvents = {
       url: '#',
     },
   ],
-  title: 'Events',
+  dataSchedule: {
+    subtitle: 'SCHEDULE',
+    title: 'Upcoming Events',
+  },
 };

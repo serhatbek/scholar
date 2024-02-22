@@ -3,10 +3,10 @@ import { Banner } from '../../components';
 import './ContactUs.scss';
 
 const ContactUs = () => {
-  const { dataBreadcrumb, title } = dataContact;
+  const { dataBreadcrumb, bannerTitle } = dataContact;
   return (
     <>
-      <Banner title={title} items={dataBreadcrumb} />
+      <Banner title={bannerTitle} items={dataBreadcrumb} />
     </>
   );
 };

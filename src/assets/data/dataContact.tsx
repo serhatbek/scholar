@@ -1,4 +1,5 @@
 export const dataContact = {
+  bannerTitle: 'Contact Us',
   dataBreadcrumb: [
     {
       label: 'Home',
@@ -9,5 +10,4 @@ export const dataContact = {
       url: '#',
     },
   ],
-  title: 'Contact Us',
 };

@@ -1,4 +1,5 @@
 export const dataCourses = {
+  bannerTitle: 'Courses',
   dataBreadcrumb: [
     {
       label: 'Home',
@@ -9,5 +10,4 @@ export const dataCourses = {
       url: '#',
     },
   ],
-  title: 'Courses',
 };
