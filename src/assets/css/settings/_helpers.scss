@@ -26,7 +26,8 @@
     }
 
     &--white {
-      > h2 {
+      > h2,
+      > h6 {
         color: c.$white;
       }
     }

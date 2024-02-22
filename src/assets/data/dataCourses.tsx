@@ -1,5 +1,8 @@
 export const dataCourses = {
-  bannerTitle: 'Courses',
+  heading: {
+    subtitle: 'COURSES',
+    title: 'Latest Courses',
+  },
   dataBreadcrumb: [
     {
       label: 'Home',

@@ -2,10 +2,10 @@ import { dataCourses } from '../../assets/data/dataCourses';
 import { Banner } from '../../components';
 
 const Courses = () => {
-  const { dataBreadcrumb, bannerTitle } = dataCourses;
+  const { dataBreadcrumb, heading } = dataCourses;
   return (
     <>
-      <Banner title={bannerTitle} items={dataBreadcrumb} />
+      <Banner heading={heading} items={dataBreadcrumb} />
     </>
   );
 };

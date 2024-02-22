@@ -1,5 +1,8 @@
 export const dataContact = {
-  bannerTitle: 'Contact Us',
+  heading: {
+    subtitle: 'Contact',
+    title: 'Contact Us',
+  },
   dataBreadcrumb: [
     {
       label: 'Home',

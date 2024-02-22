@@ -3,7 +3,10 @@ const event2 = 'images/event-02.jpg';
 const event3 = 'images/event-03.jpg';
 
 export const dataEvents = {
-  bannerTitle: 'Events',
+  heading: {
+    subtitle: 'SCHEDULE',
+    title: 'Upcoming Events',
+  },
   dataBreadcrumb: [
     {
       label: 'Home',
