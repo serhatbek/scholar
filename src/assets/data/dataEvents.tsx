@@ -1,13 +1,13 @@
-export const dataCourses = {
+export const dataEvents = {
   dataBreadcrumb: [
     {
       label: 'Home',
       url: '/scholar/',
     },
     {
-      label: 'Courses',
+      label: 'Events',
       url: '#',
     },
   ],
-  title: 'Courses',
+  title: 'Events',
 };
