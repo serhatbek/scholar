@@ -2,12 +2,10 @@ import './CountUp.scss';
 import CountUpRC from 'react-countup';
 
 interface CountUpProps {
-  item: itemProps;
-}
-
-interface itemProps {
-  count: number;
-  text: string;
+  item: {
+    count: number;
+    text: string;
+  };
 }
 
 const CountUp = ({ item }: CountUpProps) => {

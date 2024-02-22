@@ -2,27 +2,25 @@ import { Button, Tag } from '../../../components';
 import './BannerCard.scss';
 
 interface BannerCardProps {
-  item: itemProps;
-}
-
-interface itemProps {
-  tag: string;
-  tagVariant: string;
-  title: string;
-  desc: string;
-  img: string;
-  btn: {
-    text: string;
-    variant: string;
-    url: string;
-  };
-  iconBtn: {
-    text: string;
-    variant: string;
-    url: string;
-    icon?: string;
-    size?: string;
-    iconClass?: string;
+  item: {
+    tag: string;
+    tagVariant: string;
+    title: string;
+    desc: string;
+    img: string;
+    btn: {
+      text: string;
+      variant: string;
+      url: string;
+    };
+    iconBtn: {
+      text: string;
+      variant: string;
+      url: string;
+      icon?: string;
+      size?: string;
+      iconClass?: string;
+    };
   };
 }
 

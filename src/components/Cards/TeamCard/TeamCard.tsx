@@ -3,17 +3,15 @@ import { SocialIcon } from '../..';
 import './TeamCard.scss';
 
 interface TeamCardProps {
-  item: itemProps;
-}
-
-interface itemProps {
-  img: string;
-  job: string;
-  name: string;
-  socials: {
-    icon: string;
-    url: string;
-  }[];
+  item: {
+    img: string;
+    job: string;
+    name: string;
+    socials: {
+      icon: string;
+      url: string;
+    }[];
+  };
 }
 
 const TeamCard = ({ item }: TeamCardProps) => {

@@ -1,14 +1,12 @@
 import './TestimonialCard.scss';
 
 interface TestimonialCardProps {
-  item: itemProps;
-}
-
-interface itemProps {
-  text: string;
-  img: string;
-  job: string;
-  name: string;
+  item: {
+    text: string;
+    img: string;
+    job: string;
+    name: string;
+  };
 }
 
 const TestimonialCard = ({ item }: TestimonialCardProps) => {

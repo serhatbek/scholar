@@ -4,12 +4,10 @@ import { NavLink } from 'react-router-dom';
 import { Icon } from '../../components';
 
 interface BreadcrumbProps {
-  items: itemProps[];
-}
-
-interface itemProps {
-  label: string;
-  url: string;
+  items: {
+    label: string;
+    url: string;
+  }[];
 }
 
 const Breadcrumb = ({ items }: BreadcrumbProps) => {

@@ -2,18 +2,16 @@ import { Button } from '../../../components';
 import './ServicesCard.scss';
 
 interface ServicesCardProps {
-  item: itemProps;
-}
-
-interface itemProps {
-  title: string;
-  desc: string;
-  img: string;
-  btn: {
-    text: string;
-    url: string;
-    variant: string;
-    icon: string;
+  item: {
+    title: string;
+    desc: string;
+    img: string;
+    btn: {
+      text: string;
+      url: string;
+      variant: string;
+      icon: string;
+    };
   };
 }
 
