@@ -3,6 +3,48 @@
 .banner {
   background-color: c.$purple;
   padding: 150px 0 100px;
+  position: relative;
+
+  @include c.media(mobile) {
+    padding: 120px 0 50px;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    background-repeat: no-repeat;
+    position: absolute;
+    opacity: 1;
+    z-index: 2;
+  }
+
+  &::before {
+    @include c.imageCacheBust('images/contact-dec-01.png');
+    right: 230px;
+    transform: rotate(180deg);
+    bottom: 0;
+    width: 318px;
+    height: 119px;
+
+    @include c.media(tablet-wide) {
+      right: 100px;
+    }
+
+    @include c.media(mobile) {
+      right: -57px;
+      bottom: -30px;
+    }
+  }
+
+  &::after {
+    content: '';
+    @include c.imageCacheBust('images/contact-dec-02.png');
+    transform: rotate(180deg);
+    left: 0;
+    top: 0;
+    width: 185px;
+    height: 137px;
+  }
 
   .container {
     .section__heading {

@@ -5,6 +5,10 @@ export const dataCourses = {
       url: '/scholar/',
     },
     {
+      label: 'Web',
+      url: '/scholar/',
+    },
+    {
       label: 'Courses',
       url: '#',
     },

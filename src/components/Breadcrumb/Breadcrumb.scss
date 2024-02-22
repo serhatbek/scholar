@@ -1,26 +1,43 @@
 @use '../../assets/css/common.scss' as c;
 
 .breadcrumb {
+  $self: &;
+  margin-bottom: 30px;
   ul {
     display: flex;
     font-size: 12px;
     align-items: center;
 
-    > li:not(:last-child) {
-      margin-right: 5px;
-    }
+    #{$self}__item {
+      position: relative;
+      &:not(:last-child) {
+        margin-right: 5px;
 
-    > li a,
-    .icon {
-      color: c.$white;
-    }
+        &::after {
+          content: '';
+          position: absolute;
+          left: -2px;
+          bottom: -1px;
+          height: 1px;
+          width: 100%;
+          background-color: c.$white;
+        }
+      }
 
-    .icon {
-      margin-left: 3px;
-    }
+      > a {
+        color: c.$white;
+        display: inline-flex;
+        position: relative;
 
-    > li span {
-      color: lighten($color: c.$text-title, $amount: 0.9);
+        > .icon {
+          margin-left: 3px;
+          color: c.$white;
+        }
+      }
+
+      > span {
+        color: rgba($color: c.$white, $alpha: 0.7);
+      }
     }
   }
 }
