@@ -42,12 +42,12 @@ const Carousel = ({
   const settings = {
     dots: false,
     arrows: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3500,
+    // autoplay: true,
+    // autoplaySpeed: 3500,
     nextArrow: <CustomNextArrow btnClass='' onClick={() => {}} />,
     prevArrow: <CustomPrevArrow btnClass='' onClick={() => {}} />,
   };
