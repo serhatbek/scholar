@@ -17,14 +17,19 @@ const CourseCard = ({ item }: CourseCardProps) => {
   return (
     <div className='course-card'>
       <a href={href}>
-        <Tag text={category} />
-        <span>{price}</span>
         <figure>
           <img src={img} alt='' />
         </figure>
       </a>
-      <h6>{teacher}</h6>
-      <h4>{desc}</h4>
+      <Tag text={category} variant='white' />
+      <span className='course-card__price'>
+        <em>$</em>
+        {price}
+      </span>
+      <div className='course-card__desc'>
+        <span>{teacher}</span>
+        <h4>{desc}</h4>
+      </div>
     </div>
   );
 };

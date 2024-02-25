@@ -5,6 +5,8 @@
   .container {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 
     #{$self}__action {
       display: flex;
@@ -32,6 +34,13 @@
           border: 1px solid c.$purple;
         }
       }
+    }
+
+    .box {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 20px;
     }
   }
 }

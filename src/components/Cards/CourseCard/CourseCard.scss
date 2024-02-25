@@ -1,2 +1,88 @@
+@use '../../../assets/css/common.scss' as c;
+
 .course-card {
+  $self: &;
+  background-color: c.$light-two;
+  border-radius: 25px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  max-width: 416px;
+  width: 100%;
+
+  > a {
+    display: block;
+    border-radius: 25px;
+    overflow: hidden;
+
+    > figure img {
+      width: 100%;
+    }
+  }
+
+  > .tag {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #7a6ad8;
+    background-color: rgba(250, 250, 250, 0.95);
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: 500;
+    display: inline-block;
+  }
+
+  &__price {
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    position: absolute;
+    right: -25px;
+    top: -50px;
+    background-color: rgba(122, 106, 216, 0.95);
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding-left: 25px;
+    padding-bottom: 25px;
+
+    > em {
+      margin-bottom: 14px;
+      font-size: 18px;
+      font-weight: 400;
+      font-style: normal;
+      vertical-align: top;
+    }
+  }
+
+  &:hover {
+    #{$self}__price {
+      transform: scale(1.2);
+    }
+  }
+
+  &__desc {
+    padding: 20px 30px 25px 30px;
+
+    > span {
+      color: #7a6ad8;
+      font-size: 15px;
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+
+    > h4 {
+      font-size: 22px;
+      font-weight: 600;
+      transition: all 0.3s;
+      color: #1e1e1e;
+    }
+  }
 }
