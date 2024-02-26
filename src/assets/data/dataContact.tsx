@@ -18,4 +18,9 @@ export const dataContact = {
     title: 'Feel Free To Contact Us Anytime',
     desc: 'Thank you for choosing our templates. We provide you best CSS templates at absolutely 100% free of charge. You may support us by sharing our website to your friends.',
   },
+  specialOffer: {
+    percent: '50',
+    date: '24 APRIL 2036',
+    href: '#',
+  },
 };

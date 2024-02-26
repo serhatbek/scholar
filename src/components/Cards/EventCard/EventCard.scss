@@ -91,7 +91,7 @@
     right: 0;
     top: 50%;
     transform: translate(0%, -50%);
-    background-color: #7a6ad8;
+    background-color: c.$purple;
     width: 60px;
     height: 120px;
     display: inline-block;
@@ -99,7 +99,7 @@
     line-height: 120px;
     font-size: 18px;
     z-index: 1;
-    color: #fff;
+    color: c.$white;
     border-radius: 60px 0px 0px 60px;
 
     @include c.media(tablet-wide) {
