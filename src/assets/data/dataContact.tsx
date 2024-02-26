@@ -13,4 +13,9 @@ export const dataContact = {
       url: '#',
     },
   ],
+  dataSection: {
+    subtitle: 'Get in touch',
+    title: 'Feel Free To Contact Us Anytime',
+    desc: 'Thank you for choosing our templates. We provide you best CSS templates at absolutely 100% free of charge. You may support us by sharing our website to your friends.',
+  },
 };

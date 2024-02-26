@@ -1,0 +1,31 @@
+@use '../../assets/css/common.scss' as c;
+
+.contact {
+  $self: &;
+  padding: 50px 0;
+  margin-top: 80px;
+  position: relative;
+
+  .container {
+    display: flex;
+    align-items: center;
+
+    > div {
+      width: 50%;
+    }
+
+    #{$self}__left {
+      //   margin-left: 60px;
+      padding: 30px 0;
+      .section__heading {
+        margin-bottom: 20px;
+      }
+
+      @include c.media(tablet-wide) {
+        margin-top: 100px;
+        margin-left: 0;
+        padding: 0 20px;
+      }
+    }
+  }
+}
