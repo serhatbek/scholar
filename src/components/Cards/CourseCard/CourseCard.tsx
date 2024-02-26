@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import { Tag } from '../../../components';
 import './CourseCard.scss';
 
@@ -9,13 +10,14 @@ interface CourseCardProps {
     price: string;
     teacher: string;
     desc: string;
+    addClass: string;
   };
 }
 
 const CourseCard = ({ item }: CourseCardProps) => {
-  const { href, img, category, price, teacher, desc } = item;
+  const { href, img, category, price, teacher, desc, addClass } = item;
   return (
-    <div className='course-card'>
+    <div className={classNames(`course-card ${addClass}`)}>
       <a href={href}>
         <figure>
           <img src={img} alt='' />

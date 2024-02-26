@@ -30,6 +30,7 @@ export const dataCourses = {
       price: '160',
       teacher: 'Frank Knight',
       desc: 'Learn Web Design',
+      addClass: 'fade-in-card',
     },
     {
       id: 2,
@@ -39,6 +40,7 @@ export const dataCourses = {
       price: '340',
       teacher: 'Darrell Mills',
       desc: 'Web Development Tips',
+      addClass: 'fade-in-card',
     },
     {
       id: 3,
@@ -48,6 +50,7 @@ export const dataCourses = {
       price: '640',
       teacher: 'Sadie Norman',
       desc: 'Latest Web Trends',
+      addClass: 'fade-in-card',
     },
     {
       id: 4,
@@ -57,6 +60,7 @@ export const dataCourses = {
       price: '450',
       teacher: 'Frances Abbott',
       desc: 'Online Learning Steps',
+      addClass: 'fade-in-card',
     },
     {
       id: 5,
@@ -66,6 +70,7 @@ export const dataCourses = {
       price: '240',
       teacher: 'Billy Jackson',
       desc: 'Full Stack Developer',
+      addClass: 'fade-in-card',
     },
     {
       id: 6,
@@ -75,6 +80,7 @@ export const dataCourses = {
       price: '320',
       teacher: 'Donald Saunders',
       desc: 'Be a WordPress Master',
+      addClass: 'fade-in-card',
     },
   ],
 };
