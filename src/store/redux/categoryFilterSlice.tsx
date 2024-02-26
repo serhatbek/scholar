@@ -2,15 +2,21 @@ import { createSlice } from '@reduxjs/toolkit';
 import { dataCourses } from '../../assets/data/dataCourses';
 
 const initialState = {
-  cards: dataCourses.cards,
+  courses: dataCourses.cards,
 };
 
 const categoryFilterSlice = createSlice({
   name: 'categoryFilter',
   initialState,
   reducers: {
-    setCategoryFilter: (state, action) => {
-      return action.payload;
+    setCategoryFilter: (state, { payload }) => {
+      if (payload === 'Show All') {
+        state.courses = dataCourses.cards;
+      } else {
+        state.courses = dataCourses.cards.filter(
+          (item) => item.category === payload
+        );
+      }
     },
   },
 });

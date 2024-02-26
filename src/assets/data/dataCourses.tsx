@@ -23,6 +23,7 @@ export const dataCourses = {
   filterBtnList: ['Show All', 'Webdesign', 'Development', 'Wordpress'],
   cards: [
     {
+      id: 1,
       href: '#',
       img: courseImg1,
       category: 'Webdesign',
@@ -31,6 +32,7 @@ export const dataCourses = {
       desc: 'Learn Web Design',
     },
     {
+      id: 2,
       href: '#',
       img: courseImg2,
       category: 'Development',
@@ -39,6 +41,7 @@ export const dataCourses = {
       desc: 'Web Development Tips',
     },
     {
+      id: 3,
       href: '#',
       img: courseImg3,
       category: 'Wordpress',
@@ -47,6 +50,7 @@ export const dataCourses = {
       desc: 'Latest Web Trends',
     },
     {
+      id: 4,
       href: '#',
       img: courseImg4,
       category: 'Development',
@@ -55,6 +59,7 @@ export const dataCourses = {
       desc: 'Online Learning Steps',
     },
     {
+      id: 5,
       href: '#',
       img: courseImg5,
       category: 'Webdesign',
@@ -63,6 +68,7 @@ export const dataCourses = {
       desc: 'Full Stack Developer',
     },
     {
+      id: 6,
       href: '#',
       img: courseImg6,
       category: 'Wordpress',

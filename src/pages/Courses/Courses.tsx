@@ -2,11 +2,23 @@ import './Courses.scss';
 import { dataCourses } from '../../assets/data/dataCourses';
 import { Banner, CourseCard } from '../../components';
 import { useId } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { setCategoryFilter } from '../../store/redux/categoryFilterSlice';
+
+interface RootState {
+  categoryFilter: any;
+}
 
 const Courses = () => {
-  const { dataBreadcrumb, heading, filterBtnList, cards } = dataCourses;
+  const { dataBreadcrumb, heading, filterBtnList } = dataCourses;
   const filterMenuItems = [...new Set(filterBtnList?.map((item) => item))];
-  // console.log(filterMenuItems);
+  const { courses } = useSelector((state: RootState) => state.categoryFilter);
+  const dispatch = useDispatch();
+
+  const handleFilter = (category: string) => {
+    dispatch(setCategoryFilter(category));
+  };
+
   return (
     <>
       <Banner heading={heading} items={dataBreadcrumb} />
@@ -14,12 +26,19 @@ const Courses = () => {
         <div className='container'>
           <div className='event-filter__action'>
             {filterMenuItems?.map((categoryText) => {
-              return <button key={useId()}>{categoryText}</button>;
+              return (
+                <button
+                  key={useId()}
+                  onClick={() => handleFilter(categoryText)}
+                >
+                  {categoryText}
+                </button>
+              );
             })}
           </div>
           <div className='box'>
-            {cards?.map((item) => (
-              <CourseCard key={useId()} item={item} />
+            {courses?.map((item: any) => (
+              <CourseCard key={item.id} item={item} />
             ))}
           </div>
         </div>
