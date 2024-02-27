@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './FloatLabel.scss';
 
 interface FloatLabelProps {
-  children: string;
+  children: JSX.Element | JSX.Element[];
   label: string;
   value: string;
 }

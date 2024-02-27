@@ -111,3 +111,105 @@
 .fade-in-card {
   animation: fadeIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
+
+.form {
+  border-radius: 25px;
+  padding: 80px;
+  background-color: c.$purple;
+  position: relative;
+  z-index: 1;
+
+  @include c.media(tablet) {
+    padding: 60px 20px;
+  }
+
+  &::before {
+    @include c.imageCacheBust('images/contact-dec-01.png');
+    position: absolute;
+    left: 50%;
+    transform: translateX(-149px);
+    opacity: 0.5;
+    top: 0;
+    width: 318px;
+    height: 119px;
+    content: '';
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  &:after {
+    @include c.imageCacheBust('images/contact-dec-02.png');
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 183px;
+    height: 149px;
+    content: '';
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  &__control {
+    position: relative;
+    margin-bottom: 30px;
+
+    > input {
+      width: 100%;
+      height: 50px;
+      border-radius: 25px;
+      background-color: rgba(249, 235, 255, 0.15);
+      border: none;
+      outline: none;
+      font-weight: 300;
+      padding: 0px 20px;
+      font-size: 14px;
+      color: c.$white;
+    }
+
+    > .label {
+      font-size: 14px;
+      line-height: 1.29;
+      font-weight: normal;
+      position: absolute;
+      pointer-events: none;
+      left: 16px;
+      top: 16px;
+      transition: 0.2s ease all;
+      color: c.$white;
+      z-index: 1;
+
+      &--float {
+        top: 5px;
+        left: 21px;
+        font-size: 10px;
+      }
+    }
+
+    > textarea {
+      width: 100%;
+      height: 120px;
+      border-radius: 25px;
+      background-color: rgba(249, 235, 255, 0.15);
+      border: none;
+      outline: none;
+      font-weight: 300;
+      padding: 20px;
+      font-size: 14px;
+      color: c.$white;
+      margin-bottom: 30px;
+    }
+
+    > span {
+      margin-top: 5px;
+      color: c.$white;
+      font-size: 12px;
+      margin-left: 16px;
+    }
+  }
+
+  &__action {
+    @include c.media(tablet) {
+      text-align: center;
+    }
+  }
+}
