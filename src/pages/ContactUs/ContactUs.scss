@@ -14,6 +14,17 @@
       width: 50%;
     }
 
+    @include c.media(tablet-wide) {
+      flex-direction: column;
+      padding-right: calc(20px * 0.5);
+      padding-left: calc(20px * 0.5);
+      margin-top: 100px;
+
+      > div {
+        width: 100%;
+      }
+    }
+
     #{$self}__left {
       //   margin-left: 60px;
       padding: 30px 0;
@@ -25,6 +36,10 @@
         margin-top: 100px;
         margin-left: 0;
         padding: 0 20px;
+      }
+
+      @include c.media(tablet) {
+        padding: 0;
       }
     }
   }

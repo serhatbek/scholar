@@ -24,7 +24,7 @@ const OfferCard = ({ item }: OfferCardProps) => {
           VALID: <em>{date}</em>
         </p>
         <p>
-          Special Offer <em>{percent}</em>OFF!
+          Special Offer <em>{percent}%</em>OFF!
         </p>
       </div>
       <Link to={href}>

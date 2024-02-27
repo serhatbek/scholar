@@ -1,9 +1,9 @@
 import { dataContact } from '../../assets/data/dataContact';
-import { Banner } from '../../components';
+import { Banner, OfferCard } from '../../components';
 import './ContactUs.scss';
 
 const ContactUs = () => {
-  const { dataBreadcrumb, heading, dataSection } = dataContact;
+  const { dataBreadcrumb, heading, dataSection, specialOffer } = dataContact;
   return (
     <>
       <Banner heading={heading} items={dataBreadcrumb} />
@@ -15,6 +15,7 @@ const ContactUs = () => {
               <h2>{dataSection?.title}</h2>
             </div>
             <p className='section__desc'>{dataSection?.desc}</p>
+            <OfferCard item={specialOffer} />
           </div>
           <div className='contact__right'></div>
         </div>
