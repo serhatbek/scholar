@@ -1,0 +1,22 @@
+@use '../../assets/css/common.scss' as c;
+
+.float-label {
+  position: relative;
+
+  .label {
+    font-size: 14px;
+    line-height: 1.29;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 16px;
+    top: 16px;
+    transition: 0.2s ease all;
+    color: c.$white;
+    z-index: 1;
+  }
+  .label-float {
+    top: 4px;
+    font-size: 10px;
+  }
+}
