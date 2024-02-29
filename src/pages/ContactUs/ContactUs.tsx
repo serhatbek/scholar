@@ -1,6 +1,6 @@
 import './ContactUs.scss';
 import { dataContact } from '../../assets/data/dataContact';
-import { Banner, Button, OfferCard } from '../../components';
+import { Banner, Button, Input, OfferCard } from '../../components';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useState } from 'react';
 
@@ -17,17 +17,17 @@ const ContactUs = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<FormValues>();
-  const [focusedField, setFocusedField] = useState<string | null>(null);
+  // const [focusedField, setFocusedField] = useState<string | null>(null);
 
-  const handleFocus = (field: string) => {
-    setFocusedField(field);
-  };
+  // const handleFocus = (field: string) => {
+  //   setFocusedField(field);
+  // };
 
-  const handleBlur = (e: any) => {
-    if (!e.target.value || e.target.value === 0) {
-      setFocusedField(null);
-    }
-  };
+  // const handleBlur = (e: any) => {
+  //   if (!e.target.value || e.target.value === 0) {
+  //     setFocusedField(null);
+  //   }
+  // };
 
   const onFormSubmit: SubmitHandler<FormValues> = (data) => {
     console.log(data);
@@ -47,7 +47,7 @@ const ContactUs = () => {
             <OfferCard item={specialOffer} />
           </div>
           <div className='contact__right'>
-            <form className='form' onSubmit={handleSubmit(onFormSubmit)}>
+            {/* <form className='form' onSubmit={handleSubmit(onFormSubmit)}>
               <div className='form__control'>
                 <input
                   id='fullName'
@@ -108,6 +108,17 @@ const ContactUs = () => {
                 />
                 {errors.message && <span>{errors.message.message}</span>}
               </div>
+
+              <div className='form__action'>
+                <Button type={true} variant='white'>
+                  Send Message Now
+                </Button>
+              </div>
+            </form> */}
+
+            <form className='form'>
+              <Input id='fullName' label='Name' />
+              <Input id='email' label='Email' />
 
               <div className='form__action'>
                 <Button type={true} variant='white'>
