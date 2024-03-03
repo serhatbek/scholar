@@ -59,6 +59,7 @@ const Header = () => {
                   className={({ isActive }) => (isActive ? 'active' : '')}
                   to={item.url}
                   end
+                  onClick={closeMobileMenu}
                 >
                   {item.name}
                 </NavLink>
