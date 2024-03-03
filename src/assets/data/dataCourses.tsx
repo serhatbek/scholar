@@ -20,7 +20,28 @@ export const dataCourses = {
       url: '#',
     },
   ],
-  filterBtnList: ['Show All', 'Webdesign', 'Development', 'Wordpress'],
+  filterBtnList: [
+    {
+      id: 1,
+      category: 'Show All',
+      btnState: true,
+    },
+    {
+      id: 2,
+      category: 'Webdesign',
+      btnState: false,
+    },
+    {
+      id: 3,
+      category: 'Development',
+      btnState: false,
+    },
+    {
+      id: 4,
+      category: 'Wordpress',
+      btnState: false,
+    },
+  ],
   cards: [
     {
       id: 1,

@@ -3,6 +3,7 @@ import { dataCourses } from '../../assets/data/dataCourses';
 
 const initialState = {
   courses: dataCourses.cards,
+  filterButtons: dataCourses.filterBtnList,
 };
 
 const categoryFilterSlice = createSlice({
@@ -18,8 +19,20 @@ const categoryFilterSlice = createSlice({
         );
       }
     },
+    setFilterBtnState: (state, { payload }) => {
+      const newState = state.filterButtons.map((item) => {
+        if (item.category === payload) {
+          return { ...item, btnState: true };
+        } else {
+          return { ...item, btnState: false };
+        }
+      });
+
+      state.filterButtons = newState;
+    },
   },
 });
 
-export const { setCategoryFilter } = categoryFilterSlice.actions;
+export const { setCategoryFilter, setFilterBtnState } =
+  categoryFilterSlice.actions;
 export default categoryFilterSlice.reducer;

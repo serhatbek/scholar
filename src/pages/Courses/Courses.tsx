@@ -1,22 +1,32 @@
 import './Courses.scss';
 import { dataCourses } from '../../assets/data/dataCourses';
-import { Banner, CourseCard } from '../../components';
-import { useId } from 'react';
+import { Banner, Button, CourseCard } from '../../components';
 import { useDispatch, useSelector } from 'react-redux';
-import { setCategoryFilter } from '../../store/redux/categoryFilterSlice';
+import {
+  setCategoryFilter,
+  setFilterBtnState,
+} from '../../store/redux/categoryFilterSlice';
 
 interface RootState {
   categoryFilter: any;
 }
 
+interface FilterButtonProps {
+  id: number;
+  category: string;
+  btnState: boolean;
+}
+
 const Courses = () => {
-  const { dataBreadcrumb, heading, filterBtnList } = dataCourses;
-  const filterMenuItems = [...new Set(filterBtnList?.map((item) => item))];
-  const { courses } = useSelector((state: RootState) => state.categoryFilter);
+  const { dataBreadcrumb, heading } = dataCourses;
+  const { courses, filterButtons } = useSelector(
+    (state: RootState) => state.categoryFilter
+  );
   const dispatch = useDispatch();
 
   const handleFilter = (category: string) => {
     dispatch(setCategoryFilter(category));
+    dispatch(setFilterBtnState(category));
   };
 
   return (
@@ -25,14 +35,15 @@ const Courses = () => {
       <section className='event-filter'>
         <div className='container'>
           <div className='event-filter__action'>
-            {filterMenuItems?.map((categoryText) => {
+            {filterButtons?.map((item: FilterButtonProps) => {
               return (
-                <button
-                  key={useId()}
-                  onClick={() => handleFilter(categoryText)}
+                <Button
+                  variant='filter'
+                  onClick={() => handleFilter(item.category)}
+                  btnClass={item.btnState ? 'active' : ''}
                 >
-                  {categoryText}
-                </button>
+                  {item.category}
+                </Button>
               );
             })}
           </div>

@@ -39,4 +39,23 @@
   .icon {
     margin-right: 10px;
   }
+
+  &--filter {
+    padding: 8px 16px !important;
+    background: c.$white;
+    border-radius: 20px;
+    color: c.$purple;
+    margin: 0px 10px 10px;
+    border: 1px solid c.$purple;
+    transition: all 0.3s;
+    height: auto;
+    font-weight: 500;
+
+    &.active,
+    &:hover {
+      background: c.$purple;
+      color: c.$white;
+      border: 1px solid c.$purple;
+    }
+  }
 }

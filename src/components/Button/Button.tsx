@@ -12,6 +12,7 @@ interface ButtonProps {
   iconRight?: string;
   iconClass?: string;
   size?: string;
+  onClick?: () => void;
 }
 
 const Button = ({
@@ -24,6 +25,7 @@ const Button = ({
   iconRight,
   iconClass,
   size,
+  onClick,
 }: ButtonProps) => {
   return (
     <>
@@ -41,6 +43,7 @@ const Button = ({
         <button
           type={type ? 'submit' : 'button'}
           className={classNames(`btn btn--${variant}`, btnClass)}
+          onClick={onClick}
         >
           {iconLeft ? <Icon icon={iconLeft} size={size} /> : null}
           <span>{children}</span>

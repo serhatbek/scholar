@@ -66,7 +66,9 @@ const Header = () => {
               </li>
             ))}
             <li>
-              <Link to={registerBtn.link}>{registerBtn.text}</Link>
+              <Link to={registerBtn.link} onClick={closeMobileMenu}>
+                {registerBtn.text}
+              </Link>
             </li>
           </ul>
         </nav>
