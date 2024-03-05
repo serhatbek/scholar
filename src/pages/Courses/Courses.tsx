@@ -6,6 +6,7 @@ import {
   setCategoryFilter,
   setFilterBtnState,
 } from '../../store/redux/categoryFilterSlice';
+import { useId } from 'react';
 
 interface RootState {
   categoryFilter: any;
@@ -38,6 +39,7 @@ const Courses = () => {
             {filterButtons?.map((item: FilterButtonProps) => {
               return (
                 <Button
+                  key={useId()}
                   variant='filter'
                   onClick={() => handleFilter(item.category)}
                   btnClass={item.btnState ? 'active' : ''}

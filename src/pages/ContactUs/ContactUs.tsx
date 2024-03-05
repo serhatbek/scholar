@@ -2,35 +2,35 @@ import './ContactUs.scss';
 import { dataContact } from '../../assets/data/dataContact';
 import { Banner, Button, Input, OfferCard } from '../../components';
 import { useForm, SubmitHandler } from 'react-hook-form';
-import { useState } from 'react';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
+import { FormValues } from '../../components/Input/Input';
 
-interface FormValues {
-  fullName: string;
-  email: string;
-  message: string;
-}
+const validationSchema = yup.object().shape({
+  fullName: yup
+    .string()
+    .required('Adınızı ve soyadınızı girmelisiniz.')
+    .min(6, 'Tam adınız 6 karakterden az olmamalı.')
+    .max(20, 'Tam adınız 20 karakteri geçmemeli.'),
+  email: yup
+    .string()
+    .email('Geçerli bir mail adresi giriniz.')
+    .required('Email adresi zorunlu.'),
+  message: yup.string().required('Mesaj alanı zorunlu.'),
+});
 
 const ContactUs = () => {
   const { dataBreadcrumb, heading, dataSection, specialOffer } = dataContact;
+
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<FormValues>();
-  // const [focusedField, setFocusedField] = useState<string | null>(null);
-
-  // const handleFocus = (field: string) => {
-  //   setFocusedField(field);
-  // };
-
-  // const handleBlur = (e: any) => {
-  //   if (!e.target.value || e.target.value === 0) {
-  //     setFocusedField(null);
-  //   }
-  // };
+  } = useForm<FormValues>({ resolver: yupResolver(validationSchema) });
 
   const onFormSubmit: SubmitHandler<FormValues> = (data) => {
-    console.log(data);
+    console.log('form data', data);
+    console.log('first submit');
   };
 
   return (
@@ -47,78 +47,28 @@ const ContactUs = () => {
             <OfferCard item={specialOffer} />
           </div>
           <div className='contact__right'>
-            {/* <form className='form' onSubmit={handleSubmit(onFormSubmit)}>
-              <div className='form__control'>
-                <input
+            <form className='form' onSubmit={handleSubmit(onFormSubmit)}>
+              <div className='form__row'>
+                <Input
                   id='fullName'
-                  type='text'
-                  {...register('fullName', {
-                    required: 'Full Name is required',
-                  })}
-                  onFocus={() => handleFocus('fullName')}
-                  onBlur={handleBlur}
+                  label='Name'
+                  register={register}
+                  required
+                  validationSchema={validationSchema}
                 />
-                <label
-                  className={
-                    focusedField === 'fullName' ? 'label label--float' : 'label'
-                  }
-                  htmlFor='fullName'
-                >
-                  Name
-                </label>
-                {errors.fullName && <span>{errors.fullName.message}</span>}
+                {errors?.fullName && <span>{errors?.fullName?.message}</span>}
               </div>
 
-              <div className='form__control'>
-                <input
-                  id='fullName'
-                  type='email'
-                  {...register('email', {
-                    required: 'Full Name is required',
-                  })}
-                  onFocus={() => handleFocus('email')}
-                  onBlur={handleBlur}
+              <div className='form__row'>
+                <Input
+                  id='email'
+                  label='Email'
+                  register={register}
+                  required
+                  validationSchema={validationSchema}
                 />
-                <label
-                  className={
-                    focusedField === 'email' ? 'label label--float' : 'label'
-                  }
-                  htmlFor='email'
-                >
-                  Email
-                </label>
-                {errors.email && <span>{errors.email.message}</span>}
+                {errors?.email && <span>{errors?.email?.message}</span>}
               </div>
-
-              <div className='form__control'>
-                <label
-                  className={
-                    focusedField === 'message' ? 'label label--float' : 'label'
-                  }
-                  htmlFor='message'
-                >
-                  Message
-                </label>
-                <textarea
-                  id='message'
-                  rows={4}
-                  {...register('message', { required: 'Message is required' })}
-                  onFocus={() => handleFocus('message')}
-                  onBlur={handleBlur}
-                />
-                {errors.message && <span>{errors.message.message}</span>}
-              </div>
-
-              <div className='form__action'>
-                <Button type={true} variant='white'>
-                  Send Message Now
-                </Button>
-              </div>
-            </form> */}
-
-            <form className='form'>
-              <Input id='fullName' label='Name' />
-              <Input id='email' label='Email' />
 
               <div className='form__action'>
                 <Button type={true} variant='white'>

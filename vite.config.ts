@@ -8,4 +8,7 @@ export default defineConfig({
   build: {
     assetsDir: './assets',
   },
+  optimizeDeps: {
+    exclude: ['@hookform/resolvers'],
+  },
 });
