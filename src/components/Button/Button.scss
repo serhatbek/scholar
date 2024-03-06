@@ -58,4 +58,12 @@
       border: 1px solid c.$purple;
     }
   }
+
+  &--disabled,
+  &--disabled:hover {
+    background: rgba(249, 235, 255, 0.15) !important;
+    color: rgba($color: c.$white, $alpha: 0.5) !important;
+    border: 1px solid rgba(249, 235, 255, 0.15) !important;
+    box-shadow: none !important;
+  }
 }

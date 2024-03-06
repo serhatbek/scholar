@@ -2,9 +2,7 @@ export { default as Header } from './Header/Header';
 export { default as Footer } from './Footer/Footer';
 
 export { default as Icon } from './Icon/Icon';
-export { default as Input } from './Input/Input';
 export { default as FloatLabel } from './FloatLabel/FloatLabel';
-export { default as Textarea } from './Textarea/Textarea';
 export { default as SocialIcon } from './SocialIcon/SocialIcon';
 export { default as Carousel } from './Carousel/Carousel';
 export { default as Tag } from './Tag/Tag';

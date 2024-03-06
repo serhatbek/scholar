@@ -1,9 +1,11 @@
 import './ContactUs.scss';
 import { dataContact } from '../../assets/data/dataContact';
 import { Banner, Button, FloatLabel, OfferCard } from '../../components';
-import { useForm, SubmitHandler } from 'react-hook-form';
+import { useForm, SubmitHandler, useFormState } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import { useState } from 'react';
+import classNames from 'classnames';
 
 interface FormValues {
   fullName: string;
@@ -26,16 +28,19 @@ const validationSchema = yup.object().shape({
 
 const ContactUs = () => {
   const { dataBreadcrumb, heading, dataSection, specialOffer } = dataContact;
+  const [formData, setFormData] = useState({});
 
   const {
     register,
     watch,
+    formState: { isValid },
     handleSubmit,
     formState: { errors },
   } = useForm<FormValues>({ resolver: yupResolver(validationSchema) });
 
   const onFormSubmit: SubmitHandler<FormValues> = (data) => {
     console.log(data);
+    setFormData(data);
   };
 
   return (
@@ -79,7 +84,11 @@ const ContactUs = () => {
               </div>
 
               <div className='form__action'>
-                <Button type={true} variant='white'>
+                <Button
+                  type={true}
+                  variant='white'
+                  btnClass={classNames(`${isValid ? '' : 'btn--disabled'}`)}
+                >
                   Send Message Now
                 </Button>
               </div>
