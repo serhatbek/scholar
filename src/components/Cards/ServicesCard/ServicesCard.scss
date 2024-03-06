@@ -44,6 +44,10 @@
     margin-right: 80px;
     transition: all 0.4s;
 
+    @include c.media(mobile) {
+      margin-right: 0;
+    }
+
     > h4 {
       font-size: 22px;
       font-weight: 600;

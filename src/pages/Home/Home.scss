@@ -140,6 +140,10 @@
     height: 119px;
     content: '';
     z-index: 2;
+
+    @include c.media(mobile) {
+      left: 0;
+    }
   }
 }
 
