@@ -4,7 +4,6 @@ import { Banner, Button, FloatLabel, OfferCard } from '../../components';
 import { useForm, SubmitHandler, useFormState } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { useState } from 'react';
 import classNames from 'classnames';
 
 interface FormValues {
@@ -28,7 +27,6 @@ const validationSchema = yup.object().shape({
 
 const ContactUs = () => {
   const { dataBreadcrumb, heading, dataSection, specialOffer } = dataContact;
-  const [formData, setFormData] = useState({});
 
   const {
     register,
@@ -40,7 +38,6 @@ const ContactUs = () => {
 
   const onFormSubmit: SubmitHandler<FormValues> = (data) => {
     console.log(data);
-    setFormData(data);
   };
 
   return (
@@ -80,7 +77,7 @@ const ContactUs = () => {
                     {...register('message')}
                   ></textarea>
                 </FloatLabel>
-                {errors?.message && <span>{errors?.email?.message}</span>}
+                {errors?.message && <span>{errors?.message?.message}</span>}
               </div>
 
               <div className='form__action'>
