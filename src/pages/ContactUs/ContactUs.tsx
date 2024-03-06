@@ -1,10 +1,15 @@
 import './ContactUs.scss';
 import { dataContact } from '../../assets/data/dataContact';
-import { Banner, Button, Input, OfferCard } from '../../components';
+import { Banner, Button, FloatLabel, OfferCard } from '../../components';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { FormValues } from '../../components/Input/Input';
+
+interface FormValues {
+  fullName: string;
+  email: string;
+  message: string;
+}
 
 const validationSchema = yup.object().shape({
   fullName: yup
@@ -24,13 +29,13 @@ const ContactUs = () => {
 
   const {
     register,
+    watch,
     handleSubmit,
     formState: { errors },
   } = useForm<FormValues>({ resolver: yupResolver(validationSchema) });
 
   const onFormSubmit: SubmitHandler<FormValues> = (data) => {
-    console.log('form data', data);
-    console.log('first submit');
+    console.log(data);
   };
 
   return (
@@ -49,25 +54,28 @@ const ContactUs = () => {
           <div className='contact__right'>
             <form className='form' onSubmit={handleSubmit(onFormSubmit)}>
               <div className='form__row'>
-                <Input
-                  id='fullName'
-                  label='Name'
-                  register={register}
-                  required
-                  validationSchema={validationSchema}
-                />
+                <FloatLabel label='Full Name' value={watch('fullName')}>
+                  <input type='text' {...register('fullName')} />
+                </FloatLabel>
                 {errors?.fullName && <span>{errors?.fullName?.message}</span>}
               </div>
 
               <div className='form__row'>
-                <Input
-                  id='email'
-                  label='Email'
-                  register={register}
-                  required
-                  validationSchema={validationSchema}
-                />
+                <FloatLabel label='Email' value={watch('email')}>
+                  <input type='email' {...register('email')} />
+                </FloatLabel>
                 {errors?.email && <span>{errors?.email?.message}</span>}
+              </div>
+
+              <div className='form__row'>
+                <FloatLabel label='Message' value={watch('message')}>
+                  <textarea
+                    id='message'
+                    rows={20}
+                    {...register('message')}
+                  ></textarea>
+                </FloatLabel>
+                {errors?.message && <span>{errors?.email?.message}</span>}
               </div>
 
               <div className='form__action'>

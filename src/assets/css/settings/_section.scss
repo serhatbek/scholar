@@ -1,0 +1,83 @@
+@use '../common.scss' as c;
+
+.section {
+  &__heading {
+    > h2 {
+      font-size: 36px;
+      font-weight: 600;
+      line-height: 44px;
+      margin-bottom: 20px;
+      color: c.$text-title;
+    }
+
+    > h6 {
+      color: c.$purple;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    &--white {
+      > h2,
+      > h6 {
+        color: c.$white;
+      }
+    }
+  }
+
+  &__desc {
+    font-size: 14px;
+    line-height: 28px;
+    margin-bottom: 50px;
+    color: c.$text-desc;
+  }
+
+  &--right-gray {
+    &:before {
+      content: '';
+      width: 84%;
+      height: 100%;
+      background-color: c.$light-two;
+      border-top-left-radius: 500px;
+      border-bottom-left-radius: 500px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+    }
+  }
+
+  &--left-gray {
+    &:before {
+      content: '';
+      width: 84%;
+      height: 100%;
+      background-color: c.$light-two;
+      border-top-right-radius: 500px;
+      border-bottom-right-radius: 500px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
+
+  &--left-purple {
+    &:before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      width: 95%;
+      height: 100%;
+      background-color: c.$purple;
+      content: '';
+      border-top-right-radius: 500px;
+      border-bottom-right-radius: 500px;
+    }
+  }
+}
