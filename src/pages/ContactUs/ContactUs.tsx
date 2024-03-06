@@ -1,7 +1,7 @@
 import './ContactUs.scss';
 import { dataContact } from '../../assets/data/dataContact';
 import { Banner, Button, FloatLabel, OfferCard } from '../../components';
-import { useForm, SubmitHandler, useFormState } from 'react-hook-form';
+import { useForm, SubmitHandler } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import classNames from 'classnames';
