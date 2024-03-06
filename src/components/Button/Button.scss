@@ -65,5 +65,6 @@
     color: rgba($color: c.$white, $alpha: 0.5) !important;
     border: 1px solid rgba(249, 235, 255, 0.15) !important;
     box-shadow: none !important;
+    cursor: not-allowed;
   }
 }
